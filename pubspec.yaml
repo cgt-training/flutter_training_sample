@@ -26,6 +26,9 @@ dependencies:
   cupertino_icons: ^0.1.2
   image_picker:
   http:
+  dio:
+  path_provider:
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

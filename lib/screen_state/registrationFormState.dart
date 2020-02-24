@@ -1,13 +1,18 @@
-//import 'dart:html';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-// Dependency Elements
+//API Calling
+import 'package:flutter_training_app/api_calling/authentication.dart';
+
+// Dependency
 import 'package:image_picker/image_picker.dart';
 
 // Form
 import 'package:flutter_training_app/Forms/registrationForm.dart';
+
+// Model
+import 'package:flutter_training_app/models/register.dart';
 
 // Validators
 import 'package:flutter_training_app/validators/textFieldValidators.dart';
@@ -23,14 +28,28 @@ class RegistrationFormState extends State<RegistrationForm>{
     FocusNode txtPassword = new FocusNode();
 
     TextFieldValidators txtFieldValidators =new TextFieldValidators();
+    RegisterModel _registerModel =  new RegisterModel();
 
     void submitForm(){
         flag = 1;
         if(_formKey.currentState.validate()) {
             flag =0;
             if(_pickedImage == null) {
+
                 this._pickImage();
                 return;
+            }else {
+
+                _formKey.currentState.save();
+                // Summary: Call the service to fire api and return response from network.
+                ApiCallsInAuthentication.registerApi(_registerModel, context).then((response) => {
+
+                    if(response.message == "success"){
+                        Navigator.pushNamed(context, '/dashboard')
+                    }else{
+                        Scaffold.of(context).showSnackBar(SnackBar(content: Text(response.message)))
+                    }
+                });
             }
             Scaffold.of(context).showSnackBar(SnackBar(content: Text('Processing data')));
         }
@@ -57,8 +76,13 @@ class RegistrationFormState extends State<RegistrationForm>{
 
         if(imageSource != null) {
             final file = await ImagePicker.pickImage(source: imageSource);
+
+            print(file.path);
+
+            _registerModel.profileImageData = file.path;
+
             if(file != null) {
-                setState(() => _pickedImage = file as File);
+                setState(() => _pickedImage = file);
             }
         }
     }
@@ -159,7 +183,6 @@ class RegistrationFormState extends State<RegistrationForm>{
                             ),
                             focusNode: txtName,
                             onFieldSubmitted: (value) => this.onFieldSubmitCustom(value, 'name'),
-//                                FocusScope.of(context).requestFocus(txtUserName),
                             validator: (value) => this.txtFieldValidators.validateFieldValue(value, 'name')
                         ),
                         TextFormField(
@@ -168,7 +191,7 @@ class RegistrationFormState extends State<RegistrationForm>{
                             ),
                             focusNode: txtUserName,
                             onFieldSubmitted: (value) => this.onFieldSubmitCustom(value, 'username'),
-                                //FocusScope.of(context).requestFocus(txtEmail),
+                            onSaved: (value) => _registerModel.username = value,
                             validator: (value) => this.txtFieldValidators.validateFieldValue(value, 'username')
                         ),
                         TextFormField(
@@ -178,7 +201,7 @@ class RegistrationFormState extends State<RegistrationForm>{
                             focusNode: txtEmail,
                             keyboardType: TextInputType.emailAddress,
                             onFieldSubmitted: (value) => this.onFieldSubmitCustom(value, 'email'),
-                                //FocusScope.of(context).requestFocus(txtPassword),
+                            onSaved: (value) => _registerModel.email = value,
                             validator: (value) => this.txtFieldValidators.validateFieldValue(value, 'email')
                         ),
                         TextFormField(
@@ -188,6 +211,7 @@ class RegistrationFormState extends State<RegistrationForm>{
                             focusNode: txtPassword,
                             onFieldSubmitted: (value) => this.onFieldSubmitCustom(value, 'password'),
                             obscureText: true,
+                            onSaved: (value) => _registerModel.password = value,
                             validator: (value) => this.txtFieldValidators.validateFieldValue(value, 'password')
                         ),
                         Container(

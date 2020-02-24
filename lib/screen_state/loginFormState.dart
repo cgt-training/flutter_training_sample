@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
@@ -60,12 +58,13 @@ class LoginFormState extends State<LoginForm> {
     }
   }
 
+
+  // Summary: function is used to validate the fields at client side.
+
   void validateOnFieldSubmitted(String value, String field) {
 
-//    var validate = this.txtFieldValidators.validateFieldValue(value, field);
-
+    // Flag = 0 if form not submitted and form =1 when form has been submitted.
     var boolValidate = this.txtFieldValidators.validateFieldValue(value, field);
-
     switch(field){
       case "email":{
         if(flag == 0 && boolValidate != null){
@@ -76,7 +75,6 @@ class LoginFormState extends State<LoginForm> {
           _loginModel.email = _emailFieldKey.currentState.value;
           FocusScope.of(context).requestFocus(txtPassword);
         }
-
         if(flag == 1 && boolValidate != null){
           _formKey.currentState.validate();
           FocusScope.of(context).requestFocus(txtEmail);
@@ -104,14 +102,6 @@ class LoginFormState extends State<LoginForm> {
       }
       break;
     }
-//    print(_passwordFieldKey.currentState.validate());
-
-//    if(validate == null){
-//      _formKey.currentState.validate();
-//      FocusScope.of(context).requestFocus(txtPassword);
-//    }else{
-//      FocusScope.of(context).requestFocus(txtEmail);
-//    }
   }
 
   @override
