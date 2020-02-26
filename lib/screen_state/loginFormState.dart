@@ -1,21 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
+import 'package:redux/redux.dart';
+import 'package:flutter_redux/flutter_redux.dart';
 
 // ApiCaliing
 import 'package:flutter_training_app/api_calling/authentication.dart';
-
-// Dependency
-import 'package:http/http.dart' as http;
 
 // Form
 import 'package:flutter_training_app/Forms/loginForm.dart';
 
 // Model
 import 'package:flutter_training_app/models/login.dart';
+import 'package:flutter_training_app/models/redux/redux_models.dart';
 
 // Response Model
 import 'package:flutter_training_app/response_model/loginResponse.dart';
+
+// UI Elements
+import 'package:flutter_training_app/ui_elements/customDialog.dart';
 
 // Validators
 import 'package:flutter_training_app/validators/textFieldValidators.dart';
@@ -26,6 +29,7 @@ class LoginFormState extends State<LoginForm> {
 
   // Summary: local variables
   int flag =0;
+  bool testRedux;
 
   // Summary: Form variables
   FocusNode txtEmail = new FocusNode();
@@ -38,29 +42,7 @@ class LoginFormState extends State<LoginForm> {
   LoginModel _loginModel = new LoginModel();
   TextFieldValidators txtFieldValidators = new TextFieldValidators();
 
-  // Summary: this function is called when we submit the form.
-  void submitForm(){
-    flag =1;
-
-    if (_formKey.currentState.validate()) {
-
-      // Summary: This save() will trigger onSaved of each formField.
-      _formKey.currentState.save();
-
-       // Summary: fetch the response from the Future async API task.
-       ApiCallsInAuthentication.loginApi(_loginModel, context).then((LoginAPIResponse resValue){
-          if(resValue.success){
-            Navigator.pushNamed(context, '/dashboard');
-          }else{
-            Scaffold.of(context).showSnackBar(SnackBar(content: Text(resValue.message)));
-          }
-      });
-    }
-  }
-
-
   // Summary: function is used to validate the fields at client side.
-
   void validateOnFieldSubmitted(String value, String field) {
 
     // Flag = 0 if form not submitted and form =1 when form has been submitted.
@@ -88,7 +70,6 @@ class LoginFormState extends State<LoginForm> {
       case "password": {
         if(flag == 0 && boolValidate != null){
           _passwordFieldKey.currentState.validate();
-//          FocusScope.of(context).requestFocus(txtPassword);
         }
         else if(flag == 0 && boolValidate == null){
           _loginModel.password = _passwordFieldKey.currentState.value;
@@ -104,18 +85,52 @@ class LoginFormState extends State<LoginForm> {
     }
   }
 
+  // Summary: this function is called when we submit the form.
+  void submitForm(){
+    flag =1;
+    print("Redux Setup");
+    print(this.testRedux);
+    if (_formKey.currentState.validate()) {
+
+      // Summary: This save() will trigger onSaved of each formField.
+      _formKey.currentState.save();
+
+      // Summary: show alert dialog with progressbar
+      CustomDialog.showDialogBox(context);
+
+      // Summary: fetch the response from the Future async API task.
+      ApiCallsInAuthentication.loginApi(_loginModel, context).then((LoginAPIResponse resValue){
+        if(resValue.success){
+          // Summary: hide progressbar.
+          Navigator.of(context).pop();
+          Navigator.pushNamed(context, '/dashboard');
+
+        }else{
+          // Summary: hide progressbar.
+          Navigator.of(context).pop();
+          Scaffold.of(context).showSnackBar(SnackBar(content: Text(resValue.message)));
+        }
+      });
+    }
+  }
+
+
   @override
   Widget build(BuildContext context) {
-
-    // Build a Form widget using the _formKey created above.
-    return Form(
-      key: _formKey,
-      child: Center(
-          child:Container(
-            margin: EdgeInsets.all(20.0),
-            child: Column(
-                    children: <Widget>[
-                      TextFormField(
+    return StoreConnector(
+      converter: (Store<AppState> store) {
+          this.testRedux = store.state.reduxSetup;
+      },
+      builder: (BuildContext context, vm) {
+        // Summary: Build a Form widget using the _formKey created above.
+        return Form(
+          key: _formKey,
+          child: Center(
+              child:Container(
+                margin: EdgeInsets.all(20.0),
+                child: Column(
+                  children: <Widget>[
+                    TextFormField(
                         decoration: const InputDecoration(
                             labelText: 'Enter Email'
                         ),
@@ -125,8 +140,8 @@ class LoginFormState extends State<LoginForm> {
                         onFieldSubmitted:(value) => this.validateOnFieldSubmitted(value, 'email'),
                         onSaved: (value) => _loginModel.email = value,
                         validator: (value) => this.txtFieldValidators.validateFieldValue(value, 'email')
-                      ),
-                      TextFormField(
+                    ),
+                    TextFormField(
                         decoration: const InputDecoration(
                             labelText: 'Enter Password'
                         ),
@@ -136,56 +151,59 @@ class LoginFormState extends State<LoginForm> {
                         onFieldSubmitted: (value) => this.validateOnFieldSubmitted(value, 'password'),
                         onSaved: (value) => _loginModel.password = value,
                         validator: (value) => this.txtFieldValidators.validateFieldValue(value, 'password')
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top: 20),
+                      child: ButtonTheme(
+                        minWidth: 300,
+                        height:50,
+                        child: FlatButton(
+                          color: Colors.pink[500],
+                          textColor: Colors.white,
+                          disabledColor: Colors.grey,
+                          disabledTextColor: Colors.black,
+                          padding: EdgeInsets.all(8.0),
+                          splashColor: Colors.blueAccent,
+
+                          onPressed: () => this.submitForm(),
+                          child: Text(
+                            "Login",
+                            style: TextStyle(fontSize: 20.0),
+                          ),
+                        ),
                       ),
-                      Container(
-                        margin: EdgeInsets.only(top: 20),
-                        child: ButtonTheme(
-                          minWidth: 300,
-                          height:50,
-                          child: FlatButton(
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top: 20),
+                      child: ButtonTheme(
+                        minWidth: 300,
+                        height: 50,
+                        child: FlatButton(
                             color: Colors.pink[500],
                             textColor: Colors.white,
                             disabledColor: Colors.grey,
                             disabledTextColor: Colors.black,
                             padding: EdgeInsets.all(8.0),
                             splashColor: Colors.blueAccent,
-
-                            onPressed: () => this.submitForm(),
+                            onPressed: () {
+                              _formKey.currentState.reset();
+                              Navigator.pushNamed(context, '/registration');
+                            },
                             child: Text(
-                              "Login",
+                              'Registration',
                               style: TextStyle(fontSize: 20.0),
-                            ),
-                          ),
+                            )
                         ),
                       ),
-                      Container(
-                        margin: EdgeInsets.only(top: 20),
-                        child: ButtonTheme(
-                          minWidth: 300,
-                          height: 50,
-                          child: FlatButton(
-                              color: Colors.pink[500],
-                              textColor: Colors.white,
-                              disabledColor: Colors.grey,
-                              disabledTextColor: Colors.black,
-                              padding: EdgeInsets.all(8.0),
-                              splashColor: Colors.blueAccent,
-                              onPressed: () {
-                                _formKey.currentState.reset();
-                                Navigator.pushNamed(context, '/registration');
-                              },
-                              child: Text(
-                                'Registration',
-                                style: TextStyle(fontSize: 20.0),
-                              )
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-          )
-      ),
+                    )
+                  ],
+                ),
+              )
+          ),
+        );
+      },
 
     );
+
   }
 }

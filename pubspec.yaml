@@ -28,7 +28,8 @@ dependencies:
   http:
   dio:
   path_provider:
-
+  redux: ^3.0.0
+  flutter_redux: ^0.5.3
 dev_dependencies:
   flutter_test:
     sdk: flutter

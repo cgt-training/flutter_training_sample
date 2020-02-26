@@ -19,14 +19,18 @@ import 'package:flutter_training_app/validators/textFieldValidators.dart';
 
 class RegistrationFormState extends State<RegistrationForm>{
 
+//    Local variables
     File _pickedImage;
     int flag = 0;
+
+    // Form variables
     final _formKey = GlobalKey<FormState>();
     FocusNode txtName = new FocusNode();
     FocusNode txtEmail = new FocusNode();
     FocusNode txtUserName = new FocusNode();
     FocusNode txtPassword = new FocusNode();
 
+    // Models and Validator
     TextFieldValidators txtFieldValidators =new TextFieldValidators();
     RegisterModel _registerModel =  new RegisterModel();
 
