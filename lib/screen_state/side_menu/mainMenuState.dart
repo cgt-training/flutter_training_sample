@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:redux/redux.dart';
+import 'package:flutter_redux/flutter_redux.dart';
 
 // Models
 import 'package:flutter_training_app/models/menuItem.dart';
+import 'package:flutter_training_app/models/redux/app_state.dart';
+
+//Response Model
+import 'package:flutter_training_app/response_model/loginResponse.dart';
 
 // Routes
 import 'package:flutter_training_app/routes/side_menu.dart';
@@ -17,12 +23,15 @@ class MainMenuState extends State<MainMenu> {
     List<MenuItem> _menuItems;
     List<Widget> _menuOptionWidgets = [];
 
+    Store<AppState> store;
+    LoginAPIResponse loginAPIResponseObj;
+
     // Summary: initialized the state with first item returned by createMenuItems
     @override
     initState() {
         super.initState();
 
-        _menuItems = SideMenuItems.createMenuItems();
+        _menuItems = SideMenuItems.createMenuItems(context);
         _selectedMenuItem = _menuItems[0];
         _appBarTitle = Text(_menuItems[0].title);
         _appBarBackgroundColor = _menuItems[0].color;
@@ -86,43 +95,50 @@ class MainMenuState extends State<MainMenu> {
 
     @override
     Widget build(BuildContext context) {
-
-        return Scaffold(
-            appBar: AppBar(
-                title: _appBarTitle,
-                backgroundColor: _appBarBackgroundColor,
-                centerTitle: true,
-            ),
-            // Summary: This will provide the side menu from left and inside the body different Screens will navigate.
-            drawer: Drawer(
-                child: ListView(
-                    children: <Widget>[
-                        Container(
-                            child: ListTile(
-                                leading: Image.asset(
-                                    'assets/images/lion.png'),
-                                title: Text("vaibhsa@gmail.com")),
-                            margin: EdgeInsetsDirectional.only(top: 20.0),
-                            color: Colors.white,
-                            constraints: BoxConstraints(
-                                maxHeight: 90.0, minHeight: 90.0)),
-                        SizedBox(
-                            child: Center(
-                                child: Container(
-                                    margin: EdgeInsetsDirectional.only( start: 10.0, end: 10.0 ),
-                                    height: 0.3,
-                                    color: Colors.black,
+        return StoreConnector(
+            converter: (Store<AppState> store){
+                this.store = store;
+                this.loginAPIResponseObj = store.state.loginAPIResponse;
+            },
+            builder: (BuildContext context, vm){
+                return Scaffold(
+                    appBar: AppBar(
+                        title: _appBarTitle,
+                        backgroundColor: _appBarBackgroundColor,
+                        centerTitle: true,
+                    ),
+                    // Summary: This will provide the side menu from left and inside the body different Screens will navigate.
+                    drawer: Drawer(
+                        child: ListView(
+                            children: <Widget>[
+                                Container(
+                                    child: ListTile(
+                                        leading: Image.asset('assets/images/lion.png'),
+                                        title: Text(this.loginAPIResponseObj.email)),
+                                    margin: EdgeInsetsDirectional.only(top: 20.0),
+                                    color: Colors.white,
+                                    constraints: BoxConstraints(
+                                        maxHeight: 90.0, minHeight: 90.0)),
+                                SizedBox(
+                                    child: Center(
+                                        child: Container(
+                                            margin: EdgeInsetsDirectional.only( start: 10.0, end: 10.0 ),
+                                            height: 0.3,
+                                            color: Colors.black,
+                                        ),
+                                    ),
                                 ),
-                            ),
+                                new Container(
+                                    color: Colors.white,
+                                    child: new Column(children: this._createMenuOptionWidgets()),
+                                ),
+                            ],
                         ),
-                        new Container(
-                            color: Colors.white,
-                            child: new Column(children: this._createMenuOptionWidgets()),
-                        ),
-                    ],
-                ),
-            ),
-            body: _getMenuItemWidget(_selectedMenuItem),
+                    ),
+                    body: _getMenuItemWidget(_selectedMenuItem),
+                );
+            },
         );
+
     }
 }

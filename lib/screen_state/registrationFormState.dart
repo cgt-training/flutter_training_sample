@@ -14,6 +14,9 @@ import 'package:flutter_training_app/Forms/registrationForm.dart';
 // Model
 import 'package:flutter_training_app/models/register.dart';
 
+//UI Elements
+import 'package:flutter_training_app/ui_elements/information_Dialog.dart';
+
 // Validators
 import 'package:flutter_training_app/validators/textFieldValidators.dart';
 
@@ -34,6 +37,7 @@ class RegistrationFormState extends State<RegistrationForm>{
     TextFieldValidators txtFieldValidators =new TextFieldValidators();
     RegisterModel _registerModel =  new RegisterModel();
 
+    // Summary: This function is called when form is submitted.
     void submitForm(){
         flag = 1;
         if(_formKey.currentState.validate()) {
@@ -59,6 +63,7 @@ class RegistrationFormState extends State<RegistrationForm>{
         }
     }
 
+    // Summary: Function for image picker.
     void _pickImage() async {
         final imageSource = await showDialog<ImageSource>(
             context: context,
@@ -91,7 +96,8 @@ class RegistrationFormState extends State<RegistrationForm>{
         }
     }
 
-    onFieldSubmitCustom(String Value, String field){
+    // Summary: This function is called when and textfield submit the value from keyboard
+     onFieldSubmitCustom(String Value, String field){
 
         var boolValidate = this.txtFieldValidators.validateFieldValue(Value, field);
         switch(field){
@@ -140,6 +146,11 @@ class RegistrationFormState extends State<RegistrationForm>{
             }
             break;
         }
+    }
+
+    // Summary: Fired when password info button is pressed.
+    void passwordInfo(){
+        InformationDialog.passwordInformation(context);
     }
 
     @override
@@ -209,8 +220,15 @@ class RegistrationFormState extends State<RegistrationForm>{
                             validator: (value) => this.txtFieldValidators.validateFieldValue(value, 'email')
                         ),
                         TextFormField(
-                            decoration: const InputDecoration(
-                                labelText: 'Enter Password'
+                            decoration: InputDecoration(
+                                labelText: 'Enter Password',
+                                suffixIcon: IconButton(
+                                    icon: Icon(Icons.info),
+                                    iconSize: 25,
+                                    onPressed: (){
+                                        this.passwordInfo();
+                                    },
+                                )
                             ),
                             focusNode: txtPassword,
                             onFieldSubmitted: (value) => this.onFieldSubmitCustom(value, 'password'),

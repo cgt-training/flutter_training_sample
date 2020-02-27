@@ -1,6 +1,9 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_training_app/actions/login_actions.dart';
 import 'package:redux/redux.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
@@ -19,10 +22,11 @@ import 'package:flutter_training_app/response_model/loginResponse.dart';
 
 // UI Elements
 import 'package:flutter_training_app/ui_elements/customDialog.dart';
+import 'package:flutter_training_app/ui_elements/information_Dialog.dart';
 
 // Validators
 import 'package:flutter_training_app/validators/textFieldValidators.dart';
-
+import 'package:flutter_training_app/validators/connectivity.dart';
 
 // Summary: This class holds data related to the login form and also maintains the state of data.
 class LoginFormState extends State<LoginForm> {
@@ -30,6 +34,8 @@ class LoginFormState extends State<LoginForm> {
   // Summary: local variables
   int flag =0;
   bool testRedux;
+  LoginAPIResponse loginAPIResponseState;
+  Store<AppState> store;
 
   // Summary: Form variables
   FocusNode txtEmail = new FocusNode();
@@ -85,33 +91,45 @@ class LoginFormState extends State<LoginForm> {
     }
   }
 
+  // Summary provides that inwhich format password must be
+  void passwordInfo(){
+    InformationDialog.passwordInformation(context);
+  }
+
   // Summary: this function is called when we submit the form.
   void submitForm(){
     flag =1;
-    print("Redux Setup");
-    print(this.testRedux);
-    if (_formKey.currentState.validate()) {
+    // Summary: Check Internet connection
+    Connectivity.networkConnection(context).then((response){
 
-      // Summary: This save() will trigger onSaved of each formField.
-      _formKey.currentState.save();
+      if (_formKey.currentState.validate()) {
 
-      // Summary: show alert dialog with progressbar
-      CustomDialog.showDialogBox(context);
+          // Summary: This save() will trigger onSaved of each formField.
+          _formKey.currentState.save();
 
-      // Summary: fetch the response from the Future async API task.
-      ApiCallsInAuthentication.loginApi(_loginModel, context).then((LoginAPIResponse resValue){
-        if(resValue.success){
-          // Summary: hide progressbar.
-          Navigator.of(context).pop();
-          Navigator.pushNamed(context, '/dashboard');
+          // Summary: show alert dialog with progressbar
+          CustomDialog.showDialogBox(context);
 
-        }else{
-          // Summary: hide progressbar.
-          Navigator.of(context).pop();
-          Scaffold.of(context).showSnackBar(SnackBar(content: Text(resValue.message)));
+          // Summary: fetch the response from the Future async API task.
+          ApiCallsInAuthentication.loginApi(_loginModel, context).then((LoginAPIResponse resValue){
+            if(resValue.success){
+              // Summary: Dispatch the action.
+              this.store.dispatch(LoginAction(loginAPIActionResponse: resValue));
+              _formKey.currentState.reset();
+              // Summary: hide progressbar.
+              Navigator.of(context).pop();
+              Navigator.pushNamed(context, '/dashboard');
+            }else{
+              // Summary: hide progressbar.
+              Navigator.of(context).pop();
+              Scaffold.of(context).showSnackBar(SnackBar(content: Text(resValue.message)));
+            }
+          });
         }
-      });
-    }
+    }).catchError((error){
+      Scaffold.of(context).showSnackBar(SnackBar(content: Text("Internet not Connected")));
+    });
+
   }
 
 
@@ -119,6 +137,7 @@ class LoginFormState extends State<LoginForm> {
   Widget build(BuildContext context) {
     return StoreConnector(
       converter: (Store<AppState> store) {
+          this.store = store;
           this.testRedux = store.state.reduxSetup;
       },
       builder: (BuildContext context, vm) {
@@ -142,8 +161,15 @@ class LoginFormState extends State<LoginForm> {
                         validator: (value) => this.txtFieldValidators.validateFieldValue(value, 'email')
                     ),
                     TextFormField(
-                        decoration: const InputDecoration(
-                            labelText: 'Enter Password'
+                        decoration: InputDecoration(
+                            labelText: 'Enter Password',
+                            suffixIcon:  IconButton(
+                               icon: Icon(Icons.info),
+                               iconSize: 25,
+                               onPressed: (){
+                                  this.passwordInfo();
+                               },
+                            )
                         ),
                         key: _passwordFieldKey,
                         focusNode: txtPassword,

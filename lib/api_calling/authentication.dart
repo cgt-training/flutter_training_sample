@@ -37,6 +37,7 @@ class ApiCallsInAuthentication{
         }
     }
 
+    // Summary: This is used to call registration API.
     static Future<RegisterAPIResponse> registerApi(RegisterModel registerObj, BuildContext context) async{
 
         Dio dio = new Dio();
@@ -56,13 +57,8 @@ class ApiCallsInAuthentication{
         catchError((error)=>{
             print("error")
         });
-        print("Response Object");
-        print(response.data);
         if(response.statusCode == 200){
             return RegisterAPIResponse.fromJson(response.data);
         }
-//        else{
-//            return "Not Login";
-//        }
     }
 }
