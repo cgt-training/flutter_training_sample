@@ -10,6 +10,7 @@ import 'package:flutter_training_app/reducers/app_reducer.dart';
 
 // Reponse Model
 import 'package:flutter_training_app/response_model/loginResponse.dart';
+import 'package:flutter_training_app/response_model/posts_response.dart';
 
 // Screens
 import 'package:flutter_training_app/screens/login.dart';
@@ -20,7 +21,7 @@ void main() {
 
     final store = Store<AppState>(
         appReducer,
-        initialState: AppState(reduxSetup: true, loginAPIResponse: LoginAPIResponse()),
+        initialState: AppState(reduxSetup: true, loginAPIResponse: LoginAPIResponse(), postsResponse: PostsResponse()),
     );
 
     runApp(StoreProvider(

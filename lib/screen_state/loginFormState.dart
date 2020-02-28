@@ -26,7 +26,7 @@ import 'package:flutter_training_app/ui_elements/information_Dialog.dart';
 
 // Validators
 import 'package:flutter_training_app/validators/textFieldValidators.dart';
-import 'package:flutter_training_app/validators/connectivity.dart';
+import 'package:flutter_training_app/util/connectivity.dart';
 
 // Summary: This class holds data related to the login form and also maintains the state of data.
 class LoginFormState extends State<LoginForm> {
@@ -47,6 +47,7 @@ class LoginFormState extends State<LoginForm> {
   // Summary: Models and validators
   LoginModel _loginModel = new LoginModel();
   TextFieldValidators txtFieldValidators = new TextFieldValidators();
+
 
   // Summary: function is used to validate the fields at client side.
   void validateOnFieldSubmitted(String value, String field) {

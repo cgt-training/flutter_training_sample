@@ -43,6 +43,8 @@ class ApiCallsInAuthentication{
         Dio dio = new Dio();
         FormData formData = new FormData();
         formData.fields..add(MapEntry("username", registerObj.username))..add(MapEntry("email", registerObj.email))..add(MapEntry("password", registerObj.password));
+
+        // Upload file using FormData.
         formData.files.add(MapEntry("profile", await MultipartFile.fromFile(registerObj.profileImageData, filename: "profile.png")));
 
         final response = await dio.post(

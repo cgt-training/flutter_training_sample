@@ -1,13 +1,16 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 
+// Actions
+import 'package:flutter_training_app/actions/actions.dart';
+
 // Dependency
 import 'package:http/http.dart' as http;
 
 // Response Model
 import 'package:flutter_training_app/response_model/posts_response.dart';
 
-class APICallPosts{
+class APICallPosts extends PostsAction{
 
     // Summary Get all the data from posts API.
     static Future<List<PostsResponse>> getPosts() async{
@@ -18,6 +21,7 @@ class APICallPosts{
         List<PostsResponse> postsList = body.map((dynamic item) => PostsResponse.fromJson(item)).toList();
 
         if(posts.statusCode == 200){
+
             return postsList;
         }else{
             throw Exception('Failed to fetch posts');

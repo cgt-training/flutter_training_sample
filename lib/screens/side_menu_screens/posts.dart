@@ -10,14 +10,7 @@ import 'package:flutter_training_app/response_model/posts_response.dart';
 import 'package:flutter_training_app/screen_state/side_menu/posts_state.dart';
 
 class Posts extends StatefulWidget{
-//    List<PostsResponse> postsResponseData;
-//
-//    Posts(){
-//        APICallPosts.getPosts().then((List<PostsResponse> response)=>{
-//            postsResponseData = response
-//        });
-//    }
-    
+
     @override
     PostsState createState() => PostsState();
 }
