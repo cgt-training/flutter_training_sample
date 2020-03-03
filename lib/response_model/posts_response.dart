@@ -1,5 +1,5 @@
-// Summary: This class will create a model to fetch the API response for posts.
 
+// Summary: This class will create a model to fetch the API response for posts.
 class PostsResponse{
 
     final int userId;

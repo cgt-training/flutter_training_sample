@@ -1,3 +1,4 @@
+// Summary: Model class to fetch the response from the login API.
 class LoginAPIResponse {
 
     final bool success;
@@ -9,6 +10,7 @@ class LoginAPIResponse {
     LoginAPIResponse({this.success, this.message, this.token, this.email, this.role});
 
     factory LoginAPIResponse.fromJson(Map<String, dynamic> json) {
+
         return LoginAPIResponse(
             success: json['success'],
             message: json['message'],

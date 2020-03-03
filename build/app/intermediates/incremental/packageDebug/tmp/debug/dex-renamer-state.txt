@@ -1,4 +1,4 @@
-#Fri Feb 28 17:32:00 IST 2020
+#Tue Mar 03 20:51:13 IST 2020
 base.0=/home/anju/AndroidStudioProjects/flutter_training_app/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

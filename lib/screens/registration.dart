@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_training_app/Forms/registrationForm.dart';
+import 'package:flutter_training_app/screens/forms/registrationForm.dart';
 
 class Registration extends StatefulWidget {
   @override
@@ -8,14 +8,14 @@ class Registration extends StatefulWidget {
 }
 
 class _RegistrationState extends State<Registration> {
-  @override
+
+    @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
         backgroundColor: Colors.pink[500],
         title: Text('Registration'),
-//        centerTitle: true,
         elevation: 0,
       ),
         body: Scrollbar(

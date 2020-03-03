@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 
 // Form
-import 'package:flutter_training_app/Forms/loginForm.dart';
+import 'package:flutter_training_app/screens/forms/loginForm.dart';
 
 
 
