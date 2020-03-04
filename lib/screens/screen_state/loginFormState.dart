@@ -1,16 +1,8 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
 
 import 'package:flutter_redux/flutter_redux.dart';
-
-// Actions
-import 'package:flutter_training_app/actions/login_actions.dart';
-
-// ApiCaliing
-import 'package:flutter_training_app/api_calling/authentication.dart';
 
 // Form
 import 'package:flutter_training_app/screens/forms/loginForm.dart';
@@ -22,7 +14,7 @@ import 'package:flutter_training_app/models/redux/redux_models.dart';
 // Response Model
 import 'package:flutter_training_app/response_model/loginResponse.dart';
 
-// Screens
+// Screens-> Screen Props
 import 'package:flutter_training_app/screens/screen_props/login_screen_props.dart';
 
 // UI Elements
@@ -38,7 +30,6 @@ class LoginFormState extends State<LoginForm> {
 
     // Summary: local variables
     int flag =0;
-    bool loggedIn;
     LoginAPIResponse loginAPIResponseState;
     LoginScreenProps screenProps;
 
@@ -105,37 +96,16 @@ class LoginFormState extends State<LoginForm> {
     // Summary: this function is called when we submit the form.
     void submitForm(){
         flag =1;
-//        Navigator.pushNamed(context, '/dashboard');
-
         // Summary: Check Internet connection
         Connectivity.networkConnection(context).then((response){
-
             if (_formKey.currentState.validate()) {
-
                 // Summary: This save() will trigger onSaved of each formField.
                 _formKey.currentState.save();
-//                Scaffold.of(context).showSnackBar(SnackBar(content: Text("Internet Connected")));
                 // Summary: show alert dialog with progressbar
                 CustomDialog.showDialogBox(context);
+                // Summary: Call the action loginAPICall
+                this.screenProps.loginAPICall(_loginModel);
 
-                this.screenProps.loginAPICall();
-                print("this.screenProps.apiResponse.loginAPIResponseState.loginAPIResponseState");
-                print(this.screenProps.apiResponse);
-                // Summary: fetch the response from the Future async API task.
-//                ApiCallsInAuthentication.loginApi(_loginModel, context).then((LoginAPIResponse resValue){
-//                    if(resValue.success){
-//                        // Summary: Dispatch the action.
-//                        this.store.dispatch(LoginAction(loginAPIActionResponse: resValue));
-//                        _formKey.currentState.reset();
-//                        // Summary: hide progressbar.
-//                        Navigator.of(context).pop();
-//                        Navigator.pushNamed(context, '/dashboard');
-//                    }else{
-//                        // Summary: hide progressbar.
-//                        Navigator.of(context).pop();
-//                        Scaffold.of(context).showSnackBar(SnackBar(content: Text(resValue.message)));
-//                    }
-//                });
             }
         }).catchError((error){
             Scaffold.of(context).showSnackBar(SnackBar(content: Text("Internet not Connected")));
@@ -164,25 +134,6 @@ class LoginFormState extends State<LoginForm> {
                 this.handleInitialBuild(props);
             },
             builder: (context, props) {
-                Widget child;
-
-                if(props.apiResponse.loginAPIResponseState.loginAPIResponseState != null){
-                    print("this.screenProps.apiResponse.BuildContext");
-                    print(props.apiResponse.loginAPIResponseState.loginAPIResponseState.success);
-                    if(props.apiResponse.loginAPIResponseState.loginAPIResponseState.success){
-//                        Scaffold.of(context).showSnackBar(SnackBar(content: Text(props.apiResponse.loginAPIResponseState.loginAPIResponseState.message)));
-                        child = Center(child: CircularProgressIndicator());
-                        //  Navigator.of(context).pop();
-//                        Navigator.pushNamed(context, '/dashboard');
-                    }else{
-                        // Summary: hide progressbar.
-                        // ignore: missing_return
-                        child = Center(child: CircularProgressIndicator());
-//                        Navigator.of(context).pop();
-//                        Scaffold.of(context).showSnackBar(SnackBar(content: Text(props.apiResponse.loginAPIResponseState.loginAPIResponseState.message)));
-                    }
-                }
-
                 // Summary: Build a Form widget using the _formKey created above.
                 return Form(
                     key: _formKey,
@@ -269,10 +220,26 @@ class LoginFormState extends State<LoginForm> {
                         )
                     ),
                 );
+            },// Builder
+            onDidChange: (LoginScreenProps props){
+                print("onDidChange: (LoginScreenProps props){");
+                if(props.apiResponse != null){
+                    if(props.apiResponse.loginAPIResponseState.loginAPIResponseState != null) {
+                        print("this.screenProps.apiResponse.onDidChange");
+                        print(props.apiResponse.loginAPIResponseState.loginAPIResponseState.success);
+                        if(props.apiResponse.loginAPIResponseState.loginAPIResponseState.success){
+                            _formKey.currentState.reset();
+                            Navigator.of(context).pop();
+                            Navigator.pushNamed(context, '/dashboard');
+                        }else{
+                            // Summary: hide progressbar.
+                            Navigator.of(context).pop();
+                            Scaffold.of(context).showSnackBar(SnackBar(content: Text(props.apiResponse.loginAPIResponseState.loginAPIResponseState.message)));
+                        }
+                    } // Outer If
+                } // Parent If
             },
-
         );
-
     }
 
     @override
@@ -285,6 +252,6 @@ class LoginFormState extends State<LoginForm> {
     void didUpdateWidget(LoginForm oldWidget) {
         // TODO: implement didUpdateWidget
         super.didUpdateWidget(oldWidget);
-        print("didUpdateWidget");
+        print("***************didUpdateWidget******************");
     }
 }

@@ -14,10 +14,10 @@ class Screen2 extends StatelessWidget {
                return mapStateToProps(store);
             },
             onInitialBuild: (props){
-                this.handleInitialBuild(props);
+//                this.handleInitialBuild(props);
             },
             builder: (context, props){
-                new Center(
+               return new Center(
                     child: new Text("Hello Screen2 :)"),
                 );
             },

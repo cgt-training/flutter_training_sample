@@ -98,7 +98,7 @@ class MainMenuState extends State<MainMenu> {
         return StoreConnector(
             converter: (Store<AppState> store){
                 this.store = store;
-                this.loginAPIResponseObj = store.state.loginStateGlobal.loginAPIResponseState as LoginAPIResponse;
+                this.loginAPIResponseObj = store.state.loginStateGlobal.loginAPIResponseState.loginAPIResponseState;
             },
             builder: (BuildContext context, vm){
                 return Scaffold(

@@ -1,3 +1,4 @@
+import 'package:flutter_training_app/models/login.dart';
 import 'package:redux/redux.dart';
 
 // Action
@@ -24,7 +25,7 @@ LoginScreenProps mapStateToProps(Store<AppState> store){
     print("LoginScreenProps mapStateToProps");
     print(store.state.loginStateGlobal);
     return LoginScreenProps(
-        loginAPICall: () => store.dispatch(loginAPICall()),
+        loginAPICall: (LoginModel loginModel) => store.dispatch(loginAPICall(loginModel)),
         apiResponse: store.state.loginStateGlobal
     );
 }
