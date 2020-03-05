@@ -37,7 +37,7 @@ class PostsState extends State<Posts>{
                     return ListView.builder(
                         itemCount: posts.length,
                         itemBuilder: (context, index){
-                            return RowListView.postListRow(posts[index], index);
+                            return RowListView.postListRow(posts[index], index, context);
                         });
                 }else{
                     return Center(child: CircularProgressIndicator());
