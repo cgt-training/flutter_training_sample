@@ -9,14 +9,15 @@ class CustomDialog{
             builder: (BuildContext context) {
                 return AlertDialog(
                     title: Text('Processing'),
-                    content: SingleChildScrollView(
-                        child: ListBody(
-                            children: <Widget>[
-                                new CircularProgressIndicator(
-                                )
-                            ],
-                        ),
-                    )
+                    content: CircularProgressIndicator()
+//                    SingleChildScrollView(
+//                        child: ListBody(
+//                            children: <Widget>[
+//                                new CircularProgressIndicator(
+//                                )
+//                            ],
+//                        ),
+//                    )
                 );
             },
         );

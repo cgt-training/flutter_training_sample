@@ -12,6 +12,7 @@ import 'package:flutter_training_app/screens/side_menu_screens/posts.dart';
 // UI Elements
 import 'package:flutter_training_app/ui_elements/row_listview.dart';
 
+// Summary: Contains the state and ui of posts.
 class PostsState extends State<Posts>{
 
     List<PostsResponse> postsResponseData;
@@ -34,11 +35,16 @@ class PostsState extends State<Posts>{
 
                 if(responseData.hasData){
                     List<PostsResponse> posts = responseData.data;
-                    return ListView.builder(
-                        itemCount: posts.length,
-                        itemBuilder: (context, index){
-                            return RowListView.postListRow(posts[index], index, context);
-                        });
+                    return MediaQuery.removePadding(
+                        context: context,
+                        child: ListView.builder(
+                            itemCount: posts.length,
+                            itemBuilder: (context, index){
+                                return RowListView.postListRow(posts[index], index, context);
+                            }),
+                        removeTop: true,
+                    );
+
                 }else{
                     return Center(child: CircularProgressIndicator());
                 }

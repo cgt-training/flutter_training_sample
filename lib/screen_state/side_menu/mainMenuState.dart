@@ -13,6 +13,7 @@ import 'package:flutter_training_app/response_model/loginResponse.dart';
 import 'package:flutter_training_app/routes/side_menu.dart';
 
 // Screens
+import 'package:flutter_training_app/screens/screen_props/login_props.dart';
 import 'package:flutter_training_app/screens/side_menu_screens/main_menu.dart';
 
 
@@ -95,13 +96,16 @@ class MainMenuState extends State<MainMenu> {
 
     @override
     Widget build(BuildContext context) {
-        return StoreConnector(
+
+        return StoreConnector<AppState, LoginProps>(
             converter: (Store<AppState> store){
-                this.store = store;
-                this.loginAPIResponseObj = store.state.loginAPIResponse;
+//                this.store = store;
+//                this.loginAPIResponseObj = store.state.loginAPIResponse;
+                return LoginProps.mapStateToProps(store);
             },
-            builder: (BuildContext context, vm){
+            builder: (context, props){
                 return Scaffold(
+                    backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
                     appBar: AppBar(
                         title: _appBarTitle,
                         backgroundColor: _appBarBackgroundColor,
@@ -114,7 +118,7 @@ class MainMenuState extends State<MainMenu> {
                                 Container(
                                     child: ListTile(
                                         leading: Image.asset('assets/images/lion.png'),
-                                        title: Text(this.loginAPIResponseObj.email)),
+                                        title: Text(props.apiResponse.email)),
                                     margin: EdgeInsetsDirectional.only(top: 20.0),
                                     color: Colors.white,
                                     constraints: BoxConstraints(
@@ -136,9 +140,19 @@ class MainMenuState extends State<MainMenu> {
                         ),
                     ),
                     body: _getMenuItemWidget(_selectedMenuItem),
+
+
                 );
             },
         );
 
     }
+
+    @override
+    void dispose() {
+        // TODO: implement dispose
+        super.dispose();
+        print("Dispose from MAIN MENU");
+    }
+
 }
