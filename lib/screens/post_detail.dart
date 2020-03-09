@@ -32,7 +32,7 @@ class PostDetail extends StatelessWidget{
         final topContentText = Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-                SizedBox(height: 100.0),
+                SizedBox(height: 50.0),
                 Icon(
                     Icons.local_post_office,
                     color: Colors.white,
@@ -40,7 +40,7 @@ class PostDetail extends StatelessWidget{
                 ),
                 Container(
                     width: 90.0,
-                    child: new Divider(color: Colors.green),
+                    child: new Divider(color: Colors.white),
                 ),
                 SizedBox(height: 10.0),
                 Expanded(
@@ -48,7 +48,7 @@ class PostDetail extends StatelessWidget{
                       postData.title,
                       style: TextStyle(
                           color: Colors.white,
-                          fontSize: 40.0
+                          fontSize: 20.0
                       ),
                       overflow: TextOverflow.ellipsis,
                       maxLines: 2,
@@ -67,6 +67,9 @@ class PostDetail extends StatelessWidget{
                                 child: Text(
                                     postData.body,
                                     style: TextStyle(color: Colors.white),
+                                    overflow: TextOverflow.ellipsis,
+                                    maxLines: 3,
+                                    textAlign: TextAlign.justify,
                                 )
                             )
                         ),
@@ -121,10 +124,17 @@ class PostDetail extends StatelessWidget{
             ],
         );
 
-        final bottomContentText = Text(
-            postData.body + postData.body,
-            style: TextStyle(fontSize: 18.0),
-        );
+        final bottomContentText =
+            Text(
+                    postData.body + postData.body,
+                    style: TextStyle(
+                        fontSize: 18.0
+                    ),
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 10,
+                    textAlign: TextAlign.justify,
+            );
+
 
         final bottomContent = Container(
             // height: MediaQuery.of(context).size.height,
@@ -133,7 +143,9 @@ class PostDetail extends StatelessWidget{
             padding: EdgeInsets.all(40.0),
             child: Center(
                 child: Column(
-                    children: <Widget>[bottomContentText],
+                    children: <Widget>[
+                        bottomContentText
+                    ],
                 ),
             ),
         );

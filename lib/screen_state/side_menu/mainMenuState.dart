@@ -99,8 +99,7 @@ class MainMenuState extends State<MainMenu> {
 
         return StoreConnector<AppState, LoginProps>(
             converter: (Store<AppState> store){
-//                this.store = store;
-//                this.loginAPIResponseObj = store.state.loginAPIResponse;
+
                 return LoginProps.mapStateToProps(store);
             },
             builder: (context, props){

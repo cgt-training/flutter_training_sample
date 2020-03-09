@@ -10,14 +10,6 @@ class CustomDialog{
                 return AlertDialog(
                     title: Text('Processing'),
                     content: CircularProgressIndicator()
-//                    SingleChildScrollView(
-//                        child: ListBody(
-//                            children: <Widget>[
-//                                new CircularProgressIndicator(
-//                                )
-//                            ],
-//                        ),
-//                    )
                 );
             },
         );

@@ -32,7 +32,7 @@ class CommentsDetail extends StatelessWidget{
         final topContentText = Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-                SizedBox(height: 100.0),
+                SizedBox(height: 50.0),
                 Icon(
                     Icons.local_post_office,
                     color: Colors.white,
@@ -123,7 +123,12 @@ class CommentsDetail extends StatelessWidget{
 
         final bottomContentText = Text(
             comments.body + comments.body,
-            style: TextStyle(fontSize: 18.0),
+            style: TextStyle(
+                fontSize: 18.0
+            ),
+            overflow: TextOverflow.ellipsis,
+            maxLines: 10,
+            textAlign: TextAlign.justify,
         );
 
         final bottomContent = Container(
