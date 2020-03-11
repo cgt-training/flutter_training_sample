@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 // Api Calling
 import 'package:flutter_training_app/api_calling/posts.dart';
+import 'package:flutter_training_app/db_operations/insert_tables.dart';
 
 // Response Model
 import 'package:flutter_training_app/response_model/posts_response.dart';
@@ -17,7 +18,7 @@ class PostsState extends State<Posts>{
 
     List<PostsResponse> postsResponseData;
     int lengthOfData;
-
+    InsertTables insertTables = new InsertTables();
     @override
     void initState() {
     // TODO: implement initState
@@ -40,7 +41,7 @@ class PostsState extends State<Posts>{
                         child: ListView.builder(
                             itemCount: posts.length,
                             itemBuilder: (context, index){
-                                return RowListView.postListRow(posts[index], index, context);
+                                return RowListView.postListRow(posts[index], index, context, insertTables);
                             }),
                         removeTop: true,
                     );

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_training_app/screens/screen_props/login_props.dart';
+import 'package:flutter_training_app/screens/sync_db_detail.dart';
 import 'package:redux/redux.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
@@ -51,7 +52,18 @@ class Dashboard extends StatelessWidget {
                                         )
                                     ],
                                 ),
-                                onPressed: ()=> print("Button pressed for "+table),
+                                onPressed: (){
+                                    print("Button pressed for "+table);
+                                    Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                            builder:(context){
+                                                return SyncDBDetail(table);
+                                            }
+                                        )
+
+                                    );
+                                }
+
                             )
                         )
 
@@ -65,7 +77,7 @@ class Dashboard extends StatelessWidget {
     Widget build(BuildContext context) {
         return StoreConnector<AppState, LoginProps>(
             converter: (Store<AppState> store) {
-//                this._loginAPIResponseObject = store.state.loginAPIResponse;
+
                 return LoginProps.mapStateToProps(store);
             },
             builder: (BuildContext context, props) {

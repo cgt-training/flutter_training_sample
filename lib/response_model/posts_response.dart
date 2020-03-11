@@ -2,10 +2,10 @@
 
 class PostsResponse{
 
-    final int userId;
-    final int id;
-    final String title;
-    final String body;
+    int userId;
+    int id;
+    String title;
+    String body;
 
     PostsResponse({
         this.userId,
@@ -23,5 +23,16 @@ class PostsResponse{
             body: json['body']
         );
     }
+
+    Map<String, dynamic> toMap() {
+        return {
+            'userId': userId,
+            'id': id,
+            'title': title,
+            'body': body
+        };
+    }
+
+
 }
 
