@@ -1,11 +1,11 @@
 // Summary: Provides the response object for comments API.
 class CommentsResponse{
 
-    final int postId;
-    final int id;
-    final String name;
-    final String email;
-    final String body;
+    int postId;
+    int id;
+    String name;
+    String email;
+    String body;
 
     CommentsResponse({
         this.postId,
@@ -15,6 +15,7 @@ class CommentsResponse{
         this.body
     });
 
+    // Summary: Convert the response data from the API into comments object.
     factory CommentsResponse.fromJson(dynamic json){
 
         return CommentsResponse(
@@ -24,5 +25,18 @@ class CommentsResponse{
             email: json['email'],
             body: json['body']
         );
+    }
+
+    // Summary: Map the comment object to properties in the object before inserting into database.
+    Map<String, dynamic> toMap(){
+
+        return{
+            'postId': postId,
+            'id': id,
+            'name': name,
+            'email': email,
+            'body': body
+        };
+
     }
 }

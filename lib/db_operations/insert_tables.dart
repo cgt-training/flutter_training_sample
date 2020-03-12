@@ -1,3 +1,6 @@
+import 'dart:ffi';
+
+import 'package:flutter_training_app/response_model/comments_response.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 
@@ -11,14 +14,12 @@ class InsertTables{
     Future<Database> dbConnection() async {
         Future<Database> database = openDatabase(
                 join(await getDatabasesPath(), 'project_database.db'), version: 1);
+//        Database db = await database;
         return database;
     }
 
     // Summary: insert the post in database.
     Future<void> insertPost(PostsResponse post) async {
-
-        print("insertPost(PostsResponse post) async");
-        print(post);
 
         Future<Database> database = dbConnection();
         // Get a reference to the database.
@@ -36,6 +37,7 @@ class InsertTables{
 
     // Summary: this will return the data contain by posts table.
     Future<List> retrievePosts() async {
+
         Future<Database> database = dbConnection();
         final Database db = await database;
         var result = await db.rawQuery("select * from posts");
@@ -45,4 +47,30 @@ class InsertTables{
         return result.toList();
     }
 
+    // Summary: This will insert the comment in database.
+    Future<Void> insertComment(CommentsResponse comment) async {
+
+        Future<Database> database = dbConnection();
+        Database db = await database;
+
+        db.insert(
+            'Comments',
+             comment.toMap(),
+            conflictAlgorithm: ConflictAlgorithm.replace
+        );
+    }
+
+    Future<List> retrieveComments() async {
+
+        Future<Database> database = dbConnection();
+        Database db = await database;
+
+        var result = await db.rawQuery("select * from Comments");
+
+        print("retrieveComments() async");
+        print(result.toList());
+
+        return result.toList();
+
+    }
 }

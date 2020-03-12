@@ -19,6 +19,7 @@ class PostsState extends State<Posts>{
     List<PostsResponse> postsResponseData;
     int lengthOfData;
     InsertTables insertTables = new InsertTables();
+
     @override
     void initState() {
     // TODO: implement initState

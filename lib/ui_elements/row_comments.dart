@@ -1,11 +1,17 @@
 //Summary: Provide ui for row of comments list view.
 import 'package:flutter/material.dart';
+import 'package:flutter_training_app/db_operations/insert_tables.dart';
 import 'package:flutter_training_app/response_model/comments_response.dart';
 import 'package:flutter_training_app/screens/comments_detail.dart';
 
+// Summary: Row for comments list.
 class RowComments {
 
-    static Card commentsListRow(BuildContext context, CommentsResponse data, index){
+    // Summary: Will provide the UI for the row of comments list.
+    static Card commentsListRow(BuildContext context, CommentsResponse data, index, InsertTables insertTables){
+
+        insertTables.insertComment(data);
+
         return Card(
             child: Column(
                 children: <Widget>[
