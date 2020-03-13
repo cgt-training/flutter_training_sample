@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_training_app/db_operations/insert_tables.dart';
 import 'package:flutter_training_app/screens/screen_props/login_props.dart';
 import 'package:flutter_training_app/screens/sync_db_detail.dart';
 import 'package:redux/redux.dart';
@@ -15,6 +16,9 @@ import 'package:flutter_training_app/response_model/loginResponse.dart';
 // Summary: Class will provide the link to update the database with network.
 class Dashboard extends StatelessWidget {
 
+    InsertTables insertTables = new InsertTables();
+
+    // Summary: Provide the cards UI for dashboard.
     postsCardUI(LoginProps props, String table, BuildContext context){
         return Card(
             child: Container(
@@ -73,12 +77,22 @@ class Dashboard extends StatelessWidget {
         );
     }
 
+    // Summary: Used to store data in database.
+    onInitialBuildMethod(LoginProps props){
+        print("Dashboard props");
+        print(props.postsList);
+        insertTables.insertMultiplePost(props.postsList);
+    }
+
     @override
     Widget build(BuildContext context) {
         return StoreConnector<AppState, LoginProps>(
             converter: (Store<AppState> store) {
 
                 return LoginProps.mapStateToProps(store);
+            },
+            onInitialBuild: (props){
+                this.onInitialBuildMethod(props);
             },
             builder: (BuildContext context, props) {
                 return Center(

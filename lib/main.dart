@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:redux/redux.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-
+import 'package:redux_thunk/redux_thunk.dart';
 //Models
 import 'package:flutter_training_app/models/redux/redux_models.dart';
 
@@ -10,7 +10,6 @@ import 'package:flutter_training_app/reducers/app_reducer.dart';
 
 // Reponse Model
 import 'package:flutter_training_app/response_model/loginResponse.dart';
-import 'package:flutter_training_app/response_model/posts_response.dart';
 
 // Screens
 import 'package:flutter_training_app/screens/login.dart';
@@ -21,7 +20,8 @@ void main() {
 
     final store = Store<AppState>(
         appReducer,
-        initialState: AppState(reduxSetup: true, loginAPIResponse: LoginAPIResponse(), postsResponse: PostsResponse()),
+        initialState: AppState(reduxSetup: true, loginAPIResponse: LoginAPIResponse(), postsResponse: []),
+        middleware: [thunkMiddleware],
     );
 
     runApp(StoreProvider(

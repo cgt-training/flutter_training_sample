@@ -8,7 +8,7 @@ import 'package:flutter_training_app/response_model/posts_response.dart';
 class AppState{
     final bool reduxSetup;
     final LoginAPIResponse loginAPIResponse;
-    final PostsResponse postsResponse;
+    final List<PostsResponse> postsResponse;
     const AppState({
         @required this.reduxSetup,
         @required this.loginAPIResponse,

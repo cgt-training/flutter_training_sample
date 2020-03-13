@@ -35,6 +35,21 @@ class InsertTables{
 
     }
 
+    // Summary: Insert multiple posts in database.
+    Future<void> insertMultiplePost(List<PostsResponse> posts) async {
+        Future<Database> database = dbConnection();
+        // Get a reference to the database.
+        final Database db = await database;
+
+        for(var i=0; i < posts.length; i++){
+            await db.insert(
+                'posts',
+                posts[i].toMap(),
+                conflictAlgorithm: ConflictAlgorithm.replace,
+            );
+        }
+    }
+
     // Summary: this will return the data contain by posts table.
     Future<List> retrievePosts() async {
 
@@ -51,6 +66,7 @@ class InsertTables{
     Future<Void> insertComment(CommentsResponse comment) async {
 
         Future<Database> database = dbConnection();
+
         Database db = await database;
 
         db.insert(
@@ -60,6 +76,23 @@ class InsertTables{
         );
     }
 
+    // Summary: Insert multiple comments in database table.
+    Future<void> insertMultipleComments(List<CommentsResponse> comments) async {
+
+        Future<Database> database = dbConnection();
+        // Summary: Get a reference to the database.
+        final Database db = await database;
+
+        for(var i=0; i < comments.length; i++){
+            await db.insert(
+                'Comments',
+                comments[i].toMap(),
+                conflictAlgorithm: ConflictAlgorithm.replace,
+            );
+        }
+    }
+
+    // Summary: Will return data contain by comment table.
     Future<List> retrieveComments() async {
 
         Future<Database> database = dbConnection();
