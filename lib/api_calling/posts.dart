@@ -14,6 +14,7 @@ class APICallPosts extends PostsAction{
 
     // Summary Get all the data from posts API.
     static Future<List<PostsResponse>> getPosts() async{
+
         final posts = await http.get('https://jsonplaceholder.typicode.com/posts');
         List<dynamic> body = json.decode(posts.body);
 

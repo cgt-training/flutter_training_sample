@@ -21,7 +21,8 @@ class CommentsState extends State<Comments>{
         // TODO: implement build
         return FutureBuilder(
 
-            future: APICallComments.getCommentsFromAPI(),
+//            future: APICallComments.getCommentsFromAPI(),
+            future: insertTables.retrieveComments(),
             builder: (BuildContext context, AsyncSnapshot<List<CommentsResponse>> responseData){
                 if(responseData.hasData){
                     List<CommentsResponse> listData = responseData.data;

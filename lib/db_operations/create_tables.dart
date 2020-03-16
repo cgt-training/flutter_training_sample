@@ -1,9 +1,10 @@
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 
+// Summary: This class contains the function which will create the tables in database.
 class CreateTables{
 
-    // This function will create the database.
+    // Summary: This function will create the tables in database.
     static createTableStatement(String tableName) async {
         switch(tableName){
             case 'Posts':
@@ -15,7 +16,6 @@ class CreateTables{
                 );
                 Database database = await db;
                 database.rawQuery('CREATE TABLE IF NOT EXISTS posts (id INTEGER PRIMARY KEY, userId INTEGER, title VARCHAR(50), body VARCHAR(100))');
-                database.close();
                 break;
             case 'Comments':
                 print(tableName+" From CreateTables");
@@ -26,7 +26,6 @@ class CreateTables{
                 );
                 Database database = await db;
                 database.rawQuery('CREATE TABLE IF NOT EXISTS comments (id INTEGER PRIMARY KEY, postId INTEGER, name VARCHAR(50), email VARCHAR(50), body VARCHAR(100))');
-                database.close();
                 break;
             default:
                 return "No table created with given Name";

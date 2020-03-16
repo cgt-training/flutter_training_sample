@@ -48,7 +48,7 @@ class CommentsDetail extends StatelessWidget{
                         comments.name,
                         style: TextStyle(
                             color: Colors.white,
-                            fontSize: 40.0
+                            fontSize: 25.0
                         ),
                         overflow: TextOverflow.ellipsis,
                         maxLines: 2,
@@ -61,7 +61,7 @@ class CommentsDetail extends StatelessWidget{
                     children: <Widget>[
 
                         Expanded(
-                            flex: 6,
+                            flex: 5,
                             child: Padding(
                                 padding: EdgeInsets.only(left: 10.0),
                                 child: Text(

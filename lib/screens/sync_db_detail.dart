@@ -44,28 +44,11 @@ class SyncDBDetail extends StatelessWidget {
     // Will Create the table in database.
     SyncDBDetail(String name){
 
-        print("Inside SyncDBDetail(String name)");
-
         this.tableName = name;
-        // Summary: Will create the table if not created yet.
-        Future<dynamic> response = CreateTables.createTableStatement(this.tableName);
     }
 
-    // Summary: This function will execute when we submit form.
-    submitForm(){
-        print("submitForm()");
-        if(_formKey.currentState.validate()){
-            _formKey.currentState.save();
-            insertTable.insertPost(postsModel);
-        }
-    }
 
-    // Summary: This function will retrieve the data from database.
-    retrieveData(){
-        insertTable.retrievePosts();
-    }
-
-    // Summary: Thsi function will provide the ui on based on condition.
+    // Summary: This function will provide the ui on based on condition.
     uiForTheBuilder(){
 
         if(this.tableName == "Posts"){

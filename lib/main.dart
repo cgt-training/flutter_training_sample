@@ -20,7 +20,7 @@ void main() {
 
     final store = Store<AppState>(
         appReducer,
-        initialState: AppState(reduxSetup: true, loginAPIResponse: LoginAPIResponse(), postsResponse: []),
+        initialState: AppState(reduxSetup: true, loginAPIResponse: LoginAPIResponse(), postsResponse: [], commentsResponse: []),
         middleware: [thunkMiddleware],
     );
 

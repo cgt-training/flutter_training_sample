@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:ffi';
 
 import 'package:flutter_training_app/response_model/comments_response.dart';
@@ -51,22 +52,32 @@ class InsertTables{
     }
 
     // Summary: this will return the data contain by posts table.
-    Future<List> retrievePosts() async {
+    Future<List<PostsResponse>> retrievePosts() async {
 
         Future<Database> database = dbConnection();
         final Database db = await database;
         var result = await db.rawQuery("select * from posts");
-        print("retrievePosts() async");
-        print(result.toList());
 
-        return result.toList();
+        List<PostsResponse> postsList = new List<PostsResponse>();
+
+        for(var i=0; i < result.length; i++){
+
+            PostsResponse post = new PostsResponse();
+            post.id = result[i]['id'];
+            post.userId = result[i]['userId'];
+            post.title = result[i]['title'];
+            post.body = result[i]['body'];
+
+            postsList.add(post);
+        }
+
+        return postsList;
     }
 
     // Summary: This will insert the comment in database.
     Future<Void> insertComment(CommentsResponse comment) async {
 
         Future<Database> database = dbConnection();
-
         Database db = await database;
 
         db.insert(
@@ -93,17 +104,29 @@ class InsertTables{
     }
 
     // Summary: Will return data contain by comment table.
-    Future<List> retrieveComments() async {
+    Future<List<CommentsResponse>> retrieveComments() async {
 
         Future<Database> database = dbConnection();
         Database db = await database;
 
         var result = await db.rawQuery("select * from Comments");
+        List<CommentsResponse> listOfComments = new List<CommentsResponse>();
 
-        print("retrieveComments() async");
-        print(result.toList());
+        for(var i=0; i < result.length; i++ ){
 
-        return result.toList();
+            CommentsResponse commentsResponse = new CommentsResponse();
+
+            commentsResponse.id = result[i]['id'];
+            commentsResponse.postId = result[i]['postId'];
+            commentsResponse.name = result[i]['name'];
+            commentsResponse.email = result[i]['email'];
+            commentsResponse.body = result[i]['body'];
+
+            listOfComments.add(commentsResponse);
+        }
+
+        return listOfComments;
+//            result.toList();
 
     }
 }

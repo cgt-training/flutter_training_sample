@@ -18,11 +18,6 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
 
-        appBar: AppBar(
-          backgroundColor: Colors.pink[500],
-          title: Text('Login'),
-          //centerTitle: true,
-        ),
         body:
           Center(
             child: Scrollbar(
@@ -30,13 +25,13 @@ class _LoginState extends State<Login> {
                child: Column(
                  children: <Widget>[
                    Container(
-                     margin: EdgeInsets.only(top: 20, bottom: 20),
+                     margin: EdgeInsets.only(top: 0, bottom: 5),
                      child: Image(image: AssetImage('assets/images/logo.png')),
                    ),
                    Container(
                      margin: EdgeInsets.only(top: 20),
                      child: Text(
-                       'Welcome To Sample App',
+                       'Sample',
                        style: TextStyle(
                            color: Colors.pink[500],
                            fontSize: 25.0

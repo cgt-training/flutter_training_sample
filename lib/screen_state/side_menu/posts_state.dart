@@ -24,15 +24,19 @@ class PostsState extends State<Posts>{
     void initState() {
     // TODO: implement initState
         super.initState();
-        print("init State");
+        // SUmmary: Call the database to fetch values.
+        insertTables.retrievePosts().then((response) {
+            this.postsResponseData = response;
+        });
     }
 
     @override
     Widget build(BuildContext context) {
-        print("build");
+
         // TODO: implement build
         return FutureBuilder(
-            future: APICallPosts.getPosts(),
+            // Future is called from the database and list is filled.
+            future: insertTables.retrievePosts(),
             builder: (BuildContext context, AsyncSnapshot<List<PostsResponse>> responseData){
 
                 if(responseData.hasData){

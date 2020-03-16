@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_training_app/actions/login_actions.dart';
+import 'package:flutter_training_app/db_operations/create_tables.dart';
 import 'package:flutter_training_app/screens/screen_props/list_props.dart';
 import 'package:redux/redux.dart';
 import 'package:flutter_redux/flutter_redux.dart';
@@ -138,6 +139,13 @@ class LoginFormState extends State<LoginForm> {
 
     }
 
+    // Summary: Will create tables in the SQLite database.
+    createTablesInDatabase(){
+
+        CreateTables.createTableStatement('Posts');
+        CreateTables.createTableStatement('Comments');
+    }
+
     @override
     Widget build(BuildContext context) {
 
@@ -149,8 +157,10 @@ class LoginFormState extends State<LoginForm> {
             },
             onInitialBuild: (props){
                 props.posts();
+                props.comments();
             },
             builder: (BuildContext context, props) {
+                createTablesInDatabase();
                 // Summary: Build a Form widget using the _formKey created above.
                 return Form(
                     key: _formKey,

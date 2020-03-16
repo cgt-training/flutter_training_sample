@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_training_app/db_operations/insert_tables.dart';
-import 'package:flutter_training_app/screens/screen_props/login_props.dart';
-import 'package:flutter_training_app/screens/sync_db_detail.dart';
 import 'package:redux/redux.dart';
 import 'package:flutter_redux/flutter_redux.dart';
+
+
+// DB Operation
+import 'package:flutter_training_app/db_operations/insert_tables.dart';
+
+// Screens
+import 'package:flutter_training_app/screens/screen_props/login_props.dart';
+import 'package:flutter_training_app/screens/sync_db_detail.dart';
 
 // Models
 import 'package:flutter_training_app/models/redux/app_state.dart';
@@ -20,6 +25,7 @@ class Dashboard extends StatelessWidget {
 
     // Summary: Provide the cards UI for dashboard.
     postsCardUI(LoginProps props, String table, BuildContext context){
+
         return Card(
             child: Container(
                 decoration: BoxDecoration(color: Colors.black12),
@@ -79,9 +85,11 @@ class Dashboard extends StatelessWidget {
 
     // Summary: Used to store data in database.
     onInitialBuildMethod(LoginProps props){
-        print("Dashboard props");
-        print(props.postsList);
-        insertTables.insertMultiplePost(props.postsList);
+        // Summary: Will insert the data in database.
+        if(props.postsList.length > 0){
+            insertTables.insertMultiplePost(props.postsList);
+            insertTables.insertMultipleComments(props.commentsList);
+        }
     }
 
     @override
@@ -95,6 +103,7 @@ class Dashboard extends StatelessWidget {
                 this.onInitialBuildMethod(props);
             },
             builder: (BuildContext context, props) {
+
                 return Center(
                     child: Scrollbar(
                         child: SingleChildScrollView(
@@ -102,6 +111,7 @@ class Dashboard extends StatelessWidget {
                                 width: MediaQuery.of(context).size.width,
                                 child: Column(
                                     children: <Widget>[
+
                                         SizedBox(
                                             height: MediaQuery.of(context).size.height * .15,
                                         ),
@@ -142,8 +152,6 @@ class Dashboard extends StatelessWidget {
                             )
                         ),
                     )
-
-
                 );
             });
     }

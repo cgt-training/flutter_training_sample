@@ -15,8 +15,6 @@ class RowListView{
 
     static Card postListRow(PostsResponse post, int index, BuildContext context, InsertTables insertTables){
 
-        insertTables.insertPost(post);
-
         return Card(
             child: Column(
                 children: <Widget>[
