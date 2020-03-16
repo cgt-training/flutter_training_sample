@@ -27,6 +27,7 @@ void main() {
     runApp(StoreProvider(
         store: store,
         child: MaterialApp(
+            debugShowCheckedModeBanner: false,
             initialRoute: '/login',
             routes: {
                 '/login': (context) => Login(),

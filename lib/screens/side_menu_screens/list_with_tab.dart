@@ -6,6 +6,7 @@ class ListsWithTab extends StatelessWidget {
     @override
     Widget build(BuildContext context) {
         return MaterialApp(
+            debugShowCheckedModeBanner: false,
             theme: ThemeData(
                 brightness: Brightness.light,
                 primaryColor: Colors.pink[800], //Changing this will change the color of the TabBar
