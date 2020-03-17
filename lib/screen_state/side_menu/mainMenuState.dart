@@ -1,10 +1,5 @@
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_training_app/screens/side_menu_screens/dashboard.dart';
-import 'package:flutter_training_app/screens/side_menu_screens/list_with_tab.dart';
-import 'package:flutter_training_app/screens/side_menu_screens/logout.dart';
-import 'package:flutter_training_app/screens/side_menu_screens/posts.dart';
-import 'package:flutter_training_app/screens/side_menu_screens/profile.dart';
 import 'package:flutter_training_app/util/colors.dart';
 import 'package:redux/redux.dart';
 
@@ -19,10 +14,15 @@ import 'package:flutter_training_app/response_model/loginResponse.dart';
 import 'package:flutter_training_app/routes/side_menu.dart';
 
 // Screens
+import 'package:flutter_training_app/screens/side_menu_screens/dashboard.dart';
 import 'package:flutter_training_app/screens/screen_props/login_props.dart';
+import 'package:flutter_training_app/screens/side_menu_screens/list_with_tab.dart';
+import 'package:flutter_training_app/screens/side_menu_screens/logout.dart';
 import 'package:flutter_training_app/screens/side_menu_screens/main_menu.dart';
+import 'package:flutter_training_app/screens/side_menu_screens/posts.dart';
+import 'package:flutter_training_app/screens/side_menu_screens/profile.dart';
 
-
+// Summary: This class provides the side menu functionality.
 class MainMenuState extends State<MainMenu> with SingleTickerProviderStateMixin {
 
     TabController tabController;
@@ -32,7 +32,7 @@ class MainMenuState extends State<MainMenu> with SingleTickerProviderStateMixin 
 
     // Summary: Class constructor for creating the tab controller.
     MainMenuState(){
-        tabController = TabController(length: 5, vsync: this);
+        tabController = TabController(length: 4, vsync: this);
     }
 
     // Summary: initialized the state with first item returned by createMenuItems
@@ -53,10 +53,9 @@ class MainMenuState extends State<MainMenu> with SingleTickerProviderStateMixin 
     List<Widget> _buildTabs() {
         return <Widget>[
             _buildTab(Icons.pie_chart, "DASHBOARD", 0),
-            _buildTab(Icons.attach_money, "TABEXAMPLE", 1),
-            _buildTab(Icons.money_off, "POSTS", 2),
-            _buildTab(Icons.table_chart, "PROFILE", 3), // TODO(clocksmith): This should be Icons.bar_chart, but its currently unavalableflutter
-            _buildTab(Icons.add_to_home_screen, "LOGOUT", 4),
+            _buildTab(Icons.table_chart, "TABEXAMPLE", 1),
+            _buildTab(Icons.person, "PROFILE", 2), // TODO(clocksmith): This should be Icons.bar_chart, but its currently unavalableflutter
+            _buildTab(Icons.add_to_home_screen, "LOGOUT", 3),
         ];
     }
 
@@ -68,7 +67,6 @@ class MainMenuState extends State<MainMenu> with SingleTickerProviderStateMixin 
         return <Widget>[
             Dashboard(),
             ListsWithTab(),
-            Posts(),
             Profile(),
             Logout()
         ];
@@ -123,31 +121,31 @@ class MainMenuState extends State<MainMenu> with SingleTickerProviderStateMixin 
                 return MaterialApp(
                     debugShowCheckedModeBanner: false,
                     home: Scaffold(
+                        bottomNavigationBar: Theme(
+                            // This theme effectively removes the default visual touch
+                            // feedback for tapping a tab, which is replaced with a custom
+                            // animation.
+                            data: Theme.of(context).copyWith(
+                                splashColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                            ),
+                            child: TabBar(
+                                // setting isScrollable to true prevents the tabs from being
+                                // wrapped in [Expanded] widgets, which allows for more
+                                // flexible sizes and size animations among tabs.
+                                isScrollable: true,
+                                labelPadding: EdgeInsets.zero,
+                                tabs: _buildTabs(),
+                                controller: tabController,
+                                // This effectively removes the tab indicator.
+                                indicator: UnderlineTabIndicator(
+                                    borderSide: BorderSide(style: BorderStyle.none)
+                                ),
+                            ),
+                        ),
                         body: SafeArea(
                             child: Column(
                                 children: <Widget>[
-                                    Theme(
-                                        // This theme effectively removes the default visual touch
-                                        // feedback for tapping a tab, which is replaced with a custom
-                                        // animation.
-                                        data: Theme.of(context).copyWith(
-                                            splashColor: Colors.transparent,
-                                            highlightColor: Colors.transparent,
-                                        ),
-                                        child: TabBar(
-                                            // setting isScrollable to true prevents the tabs from being
-                                            // wrapped in [Expanded] widgets, which allows for more
-                                            // flexible sizes and size animations among tabs.
-                                            isScrollable: true,
-                                            labelPadding: EdgeInsets.zero,
-                                            tabs: _buildTabs(),
-                                            controller: tabController,
-                                            // This effectively removes the tab indicator.
-                                            indicator: UnderlineTabIndicator(
-                                                borderSide: BorderSide(style: BorderStyle.none)
-                                            ),
-                                        ),
-                                    ),
                                     Expanded(
                                         child: TabBarView(
                                             children: _buildTabViews(context),
@@ -241,13 +239,13 @@ class _RallyTabState extends State<_RallyTab> with SingleTickerProviderStateMixi
             child: Row(
                 children: <Widget>[
                     SizedBox(
-                        width: width / 7,
+                        width: width / 6,
                         child: widget.icon,
                     ),
                     FadeTransition(
                         child: SizeTransition(
                             child: SizedBox(
-                                width: width / 4,
+                                width: width / 3,
                                 child: Center(child: widget.titleText),
                             ),
                             axis: Axis.horizontal,

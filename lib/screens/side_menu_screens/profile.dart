@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:flutter_training_app/models/redux/app_state.dart';
-import 'package:flutter_training_app/response_model/loginResponse.dart';
-import 'package:flutter_training_app/screens/screen_props/login_props.dart';
 import 'package:redux/redux.dart';
 
+// Models
+import 'package:flutter_training_app/models/redux/app_state.dart';
+
+// Response Model
+import 'package:flutter_training_app/response_model/loginResponse.dart';
+
+// Screens
+import 'package:flutter_training_app/screens/screen_props/login_props.dart';
+
+// Summary: It will display the user information using redux.
 class Profile extends StatelessWidget{
     LoginAPIResponse loginAPIResponse;
 
@@ -141,6 +148,9 @@ class Profile extends StatelessWidget{
                 return LoginProps.mapStateToProps(store);
             }, builder: (BuildContext context, props) {
                 return Scaffold(
+                    appBar: AppBar(
+                        title: Text('Profile'),
+                    ),
                     body: Column(
                         children: <Widget>[
                             topContent(props),

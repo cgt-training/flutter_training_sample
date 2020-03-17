@@ -105,52 +105,57 @@ class Dashboard extends StatelessWidget {
             builder: (BuildContext context, props) {
 
                 return Center(
-                    child: Scrollbar(
-                        child: SingleChildScrollView(
-                            child: Container(
-                                width: MediaQuery.of(context).size.width,
-                                child: Column(
-                                    children: <Widget>[
-
-                                        SizedBox(
-                                            height: MediaQuery.of(context).size.height * .15,
-                                        ),
-                                        Row(
-                                            mainAxisAlignment: MainAxisAlignment.center,
-                                            children: <Widget>[
-                                                postsCardUI(props, 'Posts', context),
-                                                SizedBox(
-                                                    width: MediaQuery.of(context).size.width * .1
-                                                ),
-                                                postsCardUI(props, 'Comments', context)
-                                            ],
-                                        ),
-                                        SizedBox(
-                                            height: MediaQuery.of(context).size.height * .05,
-                                        ),
-                                        Row(
-                                            mainAxisAlignment: MainAxisAlignment.center,
-                                            children: <Widget>[
-                                                postsCardUI(props, 'Albums', context),
-                                                SizedBox(
-                                                    width: MediaQuery.of(context).size.width * .1
-                                                ),
-                                                postsCardUI(props, 'Photos', context)
-                                            ],
-                                        ),
-                                        SizedBox(
-                                            height: MediaQuery.of(context).size.height * .05,
-                                        ),
-                                        Row(
-                                            mainAxisAlignment: MainAxisAlignment.center,
-                                            children: <Widget>[
-                                                postsCardUI(props, 'ToDos', context),
-                                            ],
-                                        ),
-                                    ],
-                                ),
-                            )
+                    child: Scaffold(
+                        appBar: AppBar(
+                            title: Text('Dashboard'),
                         ),
+                        body: Scrollbar(
+                            child: SingleChildScrollView(
+                                child: Container(
+                                    width: MediaQuery.of(context).size.width,
+                                    child: Column(
+                                        children: <Widget>[
+
+                                            SizedBox(
+                                                height: MediaQuery.of(context).size.height * .15,
+                                            ),
+                                            Row(
+                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                children: <Widget>[
+                                                    postsCardUI(props, 'Posts', context),
+                                                    SizedBox(
+                                                        width: MediaQuery.of(context).size.width * .1
+                                                    ),
+                                                    postsCardUI(props, 'Comments', context)
+                                                ],
+                                            ),
+                                            SizedBox(
+                                                height: MediaQuery.of(context).size.height * .05,
+                                            ),
+                                            Row(
+                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                children: <Widget>[
+                                                    postsCardUI(props, 'Albums', context),
+                                                    SizedBox(
+                                                        width: MediaQuery.of(context).size.width * .1
+                                                    ),
+                                                    postsCardUI(props, 'Photos', context)
+                                                ],
+                                            ),
+                                            SizedBox(
+                                                height: MediaQuery.of(context).size.height * .05,
+                                            ),
+                                            Row(
+                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                children: <Widget>[
+                                                    postsCardUI(props, 'ToDos', context),
+                                                ],
+                                            ),
+                                        ],
+                                    ),
+                                )
+                            ),
+                        )
                     )
                 );
             });

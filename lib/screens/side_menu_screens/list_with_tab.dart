@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+
+// Screens
 import 'package:flutter_training_app/screens/side_menu_screens/comments.dart';
 import 'package:flutter_training_app/screens/side_menu_screens/posts.dart';
 
+// Summary: provide the tab functionality with list.
 class ListsWithTab extends StatelessWidget {
     @override
     Widget build(BuildContext context) {
@@ -17,10 +20,13 @@ class ListsWithTab extends StatelessWidget {
                 child:
                     Scaffold(
                         backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
-                        bottomNavigationBar: Container(
-                            color: Colors.black,
-                            child: TabBar(
-                                indicatorColor: Colors.lime,
+//                        bottomNavigationBar:
+                        appBar: AppBar(
+                            title: Text('Tab With Lists'),
+                            backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
+                            bottom: TabBar(
+                                indicatorColor: Colors.white,
+                                indicatorSize: TabBarIndicatorSize.label,
                                 unselectedLabelColor: Colors.red,
                                 tabs: <Widget>[
                                     Tab(
@@ -34,14 +40,12 @@ class ListsWithTab extends StatelessWidget {
                                 ],
                             ),
                         ),
-
                         body: TabBarView(
-
-                            children: <Widget>[
-                                Posts(),
-                                Comments()
-                            ],
-                        ),
+                                children: <Widget>[
+                                    Posts(),
+                                    Comments()
+                                ],
+                            ),
                     ),
             )
         );
