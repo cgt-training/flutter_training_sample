@@ -33,6 +33,7 @@ dependencies:
   redux_thunk:
   sqflite: ^1.2.2
   path:
+  font_awesome_flutter: ^8.0.1
 
 dev_dependencies:
   flutter_test:

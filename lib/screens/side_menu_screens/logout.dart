@@ -17,14 +17,18 @@ class Logout extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
 
+      timer = new Timer(const Duration(milliseconds: 1000), () {
+          timer.cancel();
+          Navigator.of(context, rootNavigator: true).pop();
+      });
 
-    // TODO: implement build
-    return new Center(
+      // TODO: implement build
+      return new Center(
             child:  Container(
                 margin: EdgeInsets.only(top: 20),
                 child: CircularProgressIndicator()
             )
-    );
+      );
   }
 
 }

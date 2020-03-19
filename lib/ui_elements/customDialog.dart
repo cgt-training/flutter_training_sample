@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class CustomDialog{
 
@@ -9,7 +10,18 @@ class CustomDialog{
             builder: (BuildContext context) {
                 return AlertDialog(
                     title: Text('Processing'),
-                    content: CircularProgressIndicator()
+                    content: Container(
+                        height: 100,
+                        width: 100,
+                        child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                                CircularProgressIndicator()
+                            ],
+                        )
+                    )
+
                 );
             },
         );
