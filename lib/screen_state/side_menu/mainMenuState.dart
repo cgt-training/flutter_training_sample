@@ -1,5 +1,6 @@
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_training_app/screens/side_menu_screens/maps_example.dart';
 import 'package:flutter_training_app/util/colors.dart';
 import 'package:redux/redux.dart';
 
@@ -32,7 +33,7 @@ class MainMenuState extends State<MainMenu> with SingleTickerProviderStateMixin 
 
     // Summary: Class constructor for creating the tab controller.
     MainMenuState(){
-        tabController = TabController(length: 4, vsync: this);
+        tabController = TabController(length: 5, vsync: this);
     }
 
     // Summary: initialized the state with first item returned by createMenuItems
@@ -55,7 +56,8 @@ class MainMenuState extends State<MainMenu> with SingleTickerProviderStateMixin 
             _buildTab(Icons.pie_chart, "DASHBOARD", 0),
             _buildTab(Icons.table_chart, "TABEXAMPLE", 1),
             _buildTab(Icons.person, "PROFILE", 2), // TODO(clocksmith): This should be Icons.bar_chart, but its currently unavalableflutter
-            _buildTab(Icons.add_to_home_screen, "LOGOUT", 3),
+            _buildTab(Icons.map, "Maps", 3),
+            _buildTab(Icons.add_to_home_screen, "LOGOUT", 4),
         ];
     }
 
@@ -68,6 +70,7 @@ class MainMenuState extends State<MainMenu> with SingleTickerProviderStateMixin 
             Dashboard(),
             ListsWithTab(),
             Profile(),
+            MapsExample(),
             Logout()
         ];
     }
@@ -149,7 +152,8 @@ class MainMenuState extends State<MainMenu> with SingleTickerProviderStateMixin 
                                     Expanded(
                                         child: TabBarView(
                                             children: _buildTabViews(context),
-                                            controller: tabController
+                                            controller: tabController,
+                                            physics: NeverScrollableScrollPhysics(),
                                         ),
                                     )
                                 ]),

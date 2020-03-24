@@ -35,6 +35,13 @@ dependencies:
   path:
   font_awesome_flutter: ^8.0.1
   cloud_firestore:
+  firebase_auth:
+  firebase_database:
+  rxdart:
+  google_maps_flutter:
+  geoflutterfire:
+  location:
+  uuid:
 
 dev_dependencies:
   flutter_test:
