@@ -5,25 +5,28 @@ INJECTED from /home/anju/AndroidStudioProjects/flutter_training_app/android/app/
 INJECTED from /home/anju/AndroidStudioProjects/flutter_training_app/android/app/src/main/AndroidManifest.xml:1:1-32:12
 INJECTED from /home/anju/AndroidStudioProjects/flutter_training_app/android/app/src/main/AndroidManifest.xml:1:1-32:12
 MERGED from /home/anju/AndroidStudioProjects/flutter_training_app/android/app/src/main/AndroidManifest.xml:1:1-32:12
-MERGED from [:firebase_auth] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
-MERGED from [:firebase_auth_web] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth_web/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:geoflutterfire] /home/anju/AndroidStudioProjects/flutter_training_app/build/geoflutterfire/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:cloud_firestore] /home/anju/AndroidStudioProjects/flutter_training_app/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
-MERGED from [:cloud_firestore_web] /home/anju/AndroidStudioProjects/flutter_training_app/build/cloud_firestore_web/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:firebase_database] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
-MERGED from [:firebase_core] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
-MERGED from [:firebase_core_web] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_core_web/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:sqflite] /home/anju/AndroidStudioProjects/flutter_training_app/build/sqflite/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:location] /home/anju/AndroidStudioProjects/flutter_training_app/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-10:12
 MERGED from [:path_provider] /home/anju/AndroidStudioProjects/flutter_training_app/build/path_provider/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:path_provider_macos] /home/anju/AndroidStudioProjects/flutter_training_app/build/path_provider_macos/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:google_maps_flutter] /home/anju/AndroidStudioProjects/flutter_training_app/build/google_maps_flutter/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-22:12
+MERGED from [:google_maps_flutter] /home/anju/AndroidStudioProjects/flutter_training_app/build/google_maps_flutter/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:flutter_plugin_android_lifecycle] /home/anju/AndroidStudioProjects/flutter_training_app/build/flutter_plugin_android_lifecycle/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:location] /home/anju/AndroidStudioProjects/flutter_training_app/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-10:12
+MERGED from [:geoflutterfire] /home/anju/AndroidStudioProjects/flutter_training_app/build/geoflutterfire/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:cloud_firestore] /home/anju/AndroidStudioProjects/flutter_training_app/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [:geolocator] /home/anju/AndroidStudioProjects/flutter_training_app/build/geolocator/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:google_api_availability] /home/anju/AndroidStudioProjects/flutter_training_app/build/google_api_availability/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:firebase_auth] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [:firebase_database] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [:cloud_firestore_web] /home/anju/AndroidStudioProjects/flutter_training_app/build/cloud_firestore_web/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:firebase_core] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [:firebase_core_web] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_core_web/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:firebase_auth_web] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth_web/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:location_permissions] /home/anju/AndroidStudioProjects/flutter_training_app/build/location_permissions/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:sqflite] /home/anju/AndroidStudioProjects/flutter_training_app/build/sqflite/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.multidex:multidex:2.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/1e43ec82407637f465c620e746b223b7/multidex-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-analytics:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/2a70ee504bd32b1bd949b6dd58d86852/firebase-analytics-17.2.2/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-maps:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/6f4e6eb26f6c204062e462fe30c558b2/play-services-maps-17.0.0/AndroidManifest.xml:17:1-38:12
 MERGED from [com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:17:1-42:12
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/6f4e6eb26f6c204062e462fe30c558b2/play-services-maps-17.0.0/AndroidManifest.xml:17:1-38:12
 MERGED from [com.google.android.gms:play-services-measurement:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/a2d3f38d709f8b9f54c2677fdca8f29a/play-services-measurement-17.2.2/AndroidManifest.xml:17:1-55:12
 MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/ca912bff2260618b5b638fe661521702/play-services-measurement-api-17.2.2/AndroidManifest.xml:17:1-36:12
 MERGED from [com.google.android.gms:play-services-measurement-sdk:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/7043a9d5f4a737f3f819087d2037f972/play-services-measurement-sdk-17.2.2/AndroidManifest.xml:17:1-25:12
@@ -32,7 +35,7 @@ MERGED from [com.google.firebase:firebase-database:17.0.0] /home/anju/.gradle/ca
 MERGED from [com.google.firebase:firebase-iid:20.0.2] /home/anju/.gradle/caches/transforms-2/files-2.1/f26cdfb5f8d69cbc9663543f3ec1de65/firebase-iid-20.0.2/AndroidManifest.xml:17:1-47:12
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/516d475c610d5ee0701cc5d0e0043980/firebase-auth-interop-19.0.0/AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.firebase:firebase-common:19.3.0] /home/anju/.gradle/caches/transforms-2/files-2.1/8198a3289316976d21f3789a6bafd1c8/jetified-firebase-common-19.3.0/AndroidManifest.xml:15:1-39:12
-MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/566e06e5ebf44c9853989bc8ffad1d28/jetified-play-services-location-16.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/438b4d2b3dc56db1a963e6409a53981b/play-services-location-17.0.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/160985c233e23f79bad9a37e22a7158f/play-services-measurement-impl-17.2.2/AndroidManifest.xml:17:1-40:12
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/141d94a470ee9666d17d69a1744b7285/play-services-measurement-sdk-api-17.2.2/AndroidManifest.xml:17:1-27:12
 MERGED from [com.google.android.gms:play-services-measurement-base:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/ee291fe42f7ab95bb28e88f1406e2eac/play-services-measurement-base-17.2.2/AndroidManifest.xml:2:1-9:12
@@ -41,7 +44,7 @@ MERGED from [com.google.firebase:firebase-iid-interop:17.0.0] /home/anju/.gradle
 MERGED from [com.google.android.gms:play-services-base:17.1.0] /home/anju/.gradle/caches/transforms-2/files-2.1/6eb14f512292913515d869914807ad40/play-services-base-17.1.0/AndroidManifest.xml:17:1-29:12
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/187fb4c1c365ae32171bd8312a35992f/play-services-tasks-17.0.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/31a3395230a9bd928e78ed2dc5338b8e/firebase-measurement-connector-18.0.0/AndroidManifest.xml:17:1-25:12
-MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/08dda63aa6024eef34fb6b14605fdb41/play-services-places-placereport-16.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/2a2ff4e2ca31d43ce7839e62c3803847/play-services-places-placereport-17.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/bf32d33463f95f7bff9ab9ece9656a67/play-services-ads-identifier-17.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/7fd22aeb4f79b9429ac8cf9bff3a7c83/jetified-play-services-basement-17.0.0/AndroidManifest.xml:17:1-28:12
 MERGED from [androidx.fragment:fragment:1.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/5157104f3bd9253cd81a7d6f29c1621c/fragment-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -55,13 +58,13 @@ MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/anju/.gra
 MERGED from [androidx.customview:customview:1.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/31cd047ed3ec37dce69ba9f16e10a05d/customview-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/5a5d53679d914b768463e606a8e8f920/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/2ecca17b0eb70fcbc1e9d8148641257d/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.core:core:1.0.2] /home/anju/.gradle/caches/transforms-2/files-2.1/3aabd8abbe4aca13d5de98eb4193fb62/core-1.0.2/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.1.0] /home/anju/.gradle/caches/transforms-2/files-2.1/3aaf6e5219b7f981ec263df919098c6f/core-1.1.0/AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/74d81cbab4baf82cd5ba855cad11f23d/lifecycle-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/82b463c8584fb88ea5a1f562d740c4b7/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a78ce9b49fd39a3eac90624d04d1ee8a/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/3bf5fc05ca184d01c3bed36c84f7c6c7/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/b652641e60f40536fdf44e18539d0968/lifecycle-viewmodel-2.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/2ae0f4532ce9c2b2540e7c7daff54826/versionedparcelable-1.0.0/AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/anju/.gradle/caches/transforms-2/files-2.1/4227c25f5adddf6ac1aa1a65c6b6f6a4/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
 MERGED from [com.google.firebase:firebase-components:16.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/5a98b0bc79b50b6878d0ab7ecf03881a/jetified-firebase-components-16.0.0/AndroidManifest.xml:15:1-23:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/c8f4c2580dddd9ecf64fc10bf9fbc418/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/b59192acc39c8e1083525bb1a0764fd3/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -90,22 +93,22 @@ INJECTED from /home/anju/AndroidStudioProjects/flutter_training_app/android/app/
 		ADDED from /home/anju/AndroidStudioProjects/flutter_training_app/android/app/src/main/AndroidManifest.xml:1:11-69
 application
 ADDED from /home/anju/AndroidStudioProjects/flutter_training_app/android/app/src/main/AndroidManifest.xml:8:5-31:19
-MERGED from [:firebase_auth] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
-MERGED from [:firebase_auth] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-20:19
+MERGED from [:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-20:19
 MERGED from [:cloud_firestore] /home/anju/AndroidStudioProjects/flutter_training_app/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [:cloud_firestore] /home/anju/AndroidStudioProjects/flutter_training_app/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_auth] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_auth] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_database] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_database] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_core] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_core] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
-MERGED from [:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-20:19
-MERGED from [:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-20:19
 MERGED from [com.google.firebase:firebase-analytics:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/2a70ee504bd32b1bd949b6dd58d86852/firebase-analytics-17.2.2/AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-analytics:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/2a70ee504bd32b1bd949b6dd58d86852/firebase-analytics-17.2.2/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-maps:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/6f4e6eb26f6c204062e462fe30c558b2/play-services-maps-17.0.0/AndroidManifest.xml:30:5-36:19
-MERGED from [com.google.android.gms:play-services-maps:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/6f4e6eb26f6c204062e462fe30c558b2/play-services-maps-17.0.0/AndroidManifest.xml:30:5-36:19
 MERGED from [com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:23:5-40:19
 MERGED from [com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:23:5-40:19
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/6f4e6eb26f6c204062e462fe30c558b2/play-services-maps-17.0.0/AndroidManifest.xml:30:5-36:19
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/6f4e6eb26f6c204062e462fe30c558b2/play-services-maps-17.0.0/AndroidManifest.xml:30:5-36:19
 MERGED from [com.google.android.gms:play-services-measurement:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/a2d3f38d709f8b9f54c2677fdca8f29a/play-services-measurement-17.2.2/AndroidManifest.xml:28:5-53:19
 MERGED from [com.google.android.gms:play-services-measurement:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/a2d3f38d709f8b9f54c2677fdca8f29a/play-services-measurement-17.2.2/AndroidManifest.xml:28:5-53:19
 MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/ca912bff2260618b5b638fe661521702/play-services-measurement-api-17.2.2/AndroidManifest.xml:26:5-34:19
@@ -122,8 +125,8 @@ MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /home/anju/.gradl
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/516d475c610d5ee0701cc5d0e0043980/firebase-auth-interop-19.0.0/AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-common:19.3.0] /home/anju/.gradle/caches/transforms-2/files-2.1/8198a3289316976d21f3789a6bafd1c8/jetified-firebase-common-19.3.0/AndroidManifest.xml:25:5-37:19
 MERGED from [com.google.firebase:firebase-common:19.3.0] /home/anju/.gradle/caches/transforms-2/files-2.1/8198a3289316976d21f3789a6bafd1c8/jetified-firebase-common-19.3.0/AndroidManifest.xml:25:5-37:19
-MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/566e06e5ebf44c9853989bc8ffad1d28/jetified-play-services-location-16.0.0/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/566e06e5ebf44c9853989bc8ffad1d28/jetified-play-services-location-16.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/438b4d2b3dc56db1a963e6409a53981b/play-services-location-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/438b4d2b3dc56db1a963e6409a53981b/play-services-location-17.0.0/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/160985c233e23f79bad9a37e22a7158f/play-services-measurement-impl-17.2.2/AndroidManifest.xml:28:5-38:19
 MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/160985c233e23f79bad9a37e22a7158f/play-services-measurement-impl-17.2.2/AndroidManifest.xml:28:5-38:19
 MERGED from [com.google.android.gms:play-services-measurement-base:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/ee291fe42f7ab95bb28e88f1406e2eac/play-services-measurement-base-17.2.2/AndroidManifest.xml:7:5-20
@@ -138,18 +141,18 @@ MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/anju/.grad
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/187fb4c1c365ae32171bd8312a35992f/play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/31a3395230a9bd928e78ed2dc5338b8e/firebase-measurement-connector-18.0.0/AndroidManifest.xml:22:5-23:19
 MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/31a3395230a9bd928e78ed2dc5338b8e/firebase-measurement-connector-18.0.0/AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/08dda63aa6024eef34fb6b14605fdb41/play-services-places-placereport-16.0.0/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/08dda63aa6024eef34fb6b14605fdb41/play-services-places-placereport-16.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/2a2ff4e2ca31d43ce7839e62c3803847/play-services-places-placereport-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/2a2ff4e2ca31d43ce7839e62c3803847/play-services-places-placereport-17.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/bf32d33463f95f7bff9ab9ece9656a67/play-services-ads-identifier-17.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/bf32d33463f95f7bff9ab9ece9656a67/play-services-ads-identifier-17.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/7fd22aeb4f79b9429ac8cf9bff3a7c83/jetified-play-services-basement-17.0.0/AndroidManifest.xml:22:5-26:19
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/7fd22aeb4f79b9429ac8cf9bff3a7c83/jetified-play-services-basement-17.0.0/AndroidManifest.xml:22:5-26:19
-MERGED from [androidx.core:core:1.0.2] /home/anju/.gradle/caches/transforms-2/files-2.1/3aabd8abbe4aca13d5de98eb4193fb62/core-1.0.2/AndroidManifest.xml:22:5-89
-MERGED from [androidx.core:core:1.0.2] /home/anju/.gradle/caches/transforms-2/files-2.1/3aabd8abbe4aca13d5de98eb4193fb62/core-1.0.2/AndroidManifest.xml:22:5-89
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/2ae0f4532ce9c2b2540e7c7daff54826/versionedparcelable-1.0.0/AndroidManifest.xml:22:5-23:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/2ae0f4532ce9c2b2540e7c7daff54826/versionedparcelable-1.0.0/AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.core:core:1.1.0] /home/anju/.gradle/caches/transforms-2/files-2.1/3aaf6e5219b7f981ec263df919098c6f/core-1.1.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.1.0] /home/anju/.gradle/caches/transforms-2/files-2.1/3aaf6e5219b7f981ec263df919098c6f/core-1.1.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/anju/.gradle/caches/transforms-2/files-2.1/4227c25f5adddf6ac1aa1a65c6b6f6a4/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/anju/.gradle/caches/transforms-2/files-2.1/4227c25f5adddf6ac1aa1a65c6b6f6a4/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.0.2] /home/anju/.gradle/caches/transforms-2/files-2.1/3aabd8abbe4aca13d5de98eb4193fb62/core-1.0.2/AndroidManifest.xml:22:18-86
+		ADDED from [androidx.core:core:1.1.0] /home/anju/.gradle/caches/transforms-2/files-2.1/3aaf6e5219b7f981ec263df919098c6f/core-1.1.0/AndroidManifest.xml:24:18-86
 	android:label
 		ADDED from /home/anju/AndroidStudioProjects/flutter_training_app/android/app/src/main/AndroidManifest.xml:10:9-45
 	android:icon
@@ -196,44 +199,50 @@ uses-sdk
 INJECTED from /home/anju/AndroidStudioProjects/flutter_training_app/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/anju/AndroidStudioProjects/flutter_training_app/android/app/src/main/AndroidManifest.xml
 INJECTED from /home/anju/AndroidStudioProjects/flutter_training_app/android/app/src/main/AndroidManifest.xml
-MERGED from [:firebase_auth] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_auth] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_auth_web] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth_web/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_auth_web] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth_web/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:geoflutterfire] /home/anju/AndroidStudioProjects/flutter_training_app/build/geoflutterfire/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:geoflutterfire] /home/anju/AndroidStudioProjects/flutter_training_app/build/geoflutterfire/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:cloud_firestore] /home/anju/AndroidStudioProjects/flutter_training_app/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:cloud_firestore] /home/anju/AndroidStudioProjects/flutter_training_app/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:cloud_firestore_web] /home/anju/AndroidStudioProjects/flutter_training_app/build/cloud_firestore_web/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:cloud_firestore_web] /home/anju/AndroidStudioProjects/flutter_training_app/build/cloud_firestore_web/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_database] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_database] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_core] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_core] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_core_web] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_core_web/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_core_web] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_core_web/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:sqflite] /home/anju/AndroidStudioProjects/flutter_training_app/build/sqflite/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:sqflite] /home/anju/AndroidStudioProjects/flutter_training_app/build/sqflite/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:location] /home/anju/AndroidStudioProjects/flutter_training_app/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:location] /home/anju/AndroidStudioProjects/flutter_training_app/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:path_provider] /home/anju/AndroidStudioProjects/flutter_training_app/build/path_provider/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:path_provider] /home/anju/AndroidStudioProjects/flutter_training_app/build/path_provider/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:path_provider_macos] /home/anju/AndroidStudioProjects/flutter_training_app/build/path_provider_macos/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:path_provider_macos] /home/anju/AndroidStudioProjects/flutter_training_app/build/path_provider_macos/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:google_maps_flutter] /home/anju/AndroidStudioProjects/flutter_training_app/build/google_maps_flutter/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:google_maps_flutter] /home/anju/AndroidStudioProjects/flutter_training_app/build/google_maps_flutter/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:google_maps_flutter] /home/anju/AndroidStudioProjects/flutter_training_app/build/google_maps_flutter/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:google_maps_flutter] /home/anju/AndroidStudioProjects/flutter_training_app/build/google_maps_flutter/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:flutter_plugin_android_lifecycle] /home/anju/AndroidStudioProjects/flutter_training_app/build/flutter_plugin_android_lifecycle/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:flutter_plugin_android_lifecycle] /home/anju/AndroidStudioProjects/flutter_training_app/build/flutter_plugin_android_lifecycle/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:location] /home/anju/AndroidStudioProjects/flutter_training_app/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:location] /home/anju/AndroidStudioProjects/flutter_training_app/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:geoflutterfire] /home/anju/AndroidStudioProjects/flutter_training_app/build/geoflutterfire/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:geoflutterfire] /home/anju/AndroidStudioProjects/flutter_training_app/build/geoflutterfire/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:cloud_firestore] /home/anju/AndroidStudioProjects/flutter_training_app/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:cloud_firestore] /home/anju/AndroidStudioProjects/flutter_training_app/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:geolocator] /home/anju/AndroidStudioProjects/flutter_training_app/build/geolocator/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:geolocator] /home/anju/AndroidStudioProjects/flutter_training_app/build/geolocator/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:google_api_availability] /home/anju/AndroidStudioProjects/flutter_training_app/build/google_api_availability/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:google_api_availability] /home/anju/AndroidStudioProjects/flutter_training_app/build/google_api_availability/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_auth] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_auth] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_database] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_database] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:cloud_firestore_web] /home/anju/AndroidStudioProjects/flutter_training_app/build/cloud_firestore_web/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:cloud_firestore_web] /home/anju/AndroidStudioProjects/flutter_training_app/build/cloud_firestore_web/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_core] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_core] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_core_web] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_core_web/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_core_web] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_core_web/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_auth_web] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth_web/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_auth_web] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth_web/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:location_permissions] /home/anju/AndroidStudioProjects/flutter_training_app/build/location_permissions/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:location_permissions] /home/anju/AndroidStudioProjects/flutter_training_app/build/location_permissions/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:sqflite] /home/anju/AndroidStudioProjects/flutter_training_app/build/sqflite/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:sqflite] /home/anju/AndroidStudioProjects/flutter_training_app/build/sqflite/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [androidx.multidex:multidex:2.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/1e43ec82407637f465c620e746b223b7/multidex-2.0.0/AndroidManifest.xml:20:5-43
 MERGED from [androidx.multidex:multidex:2.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/1e43ec82407637f465c620e746b223b7/multidex-2.0.0/AndroidManifest.xml:20:5-43
 MERGED from [com.google.firebase:firebase-analytics:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/2a70ee504bd32b1bd949b6dd58d86852/firebase-analytics-17.2.2/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-analytics:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/2a70ee504bd32b1bd949b6dd58d86852/firebase-analytics-17.2.2/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-maps:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/6f4e6eb26f6c204062e462fe30c558b2/play-services-maps-17.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-maps:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/6f4e6eb26f6c204062e462fe30c558b2/play-services-maps-17.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:21:5-44
 MERGED from [com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:21:5-44
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/6f4e6eb26f6c204062e462fe30c558b2/play-services-maps-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/6f4e6eb26f6c204062e462fe30c558b2/play-services-maps-17.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/a2d3f38d709f8b9f54c2677fdca8f29a/play-services-measurement-17.2.2/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/a2d3f38d709f8b9f54c2677fdca8f29a/play-services-measurement-17.2.2/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/ca912bff2260618b5b638fe661521702/play-services-measurement-api-17.2.2/AndroidManifest.xml:20:5-44
@@ -250,8 +259,8 @@ MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /home/anju/.gradl
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/516d475c610d5ee0701cc5d0e0043980/firebase-auth-interop-19.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-common:19.3.0] /home/anju/.gradle/caches/transforms-2/files-2.1/8198a3289316976d21f3789a6bafd1c8/jetified-firebase-common-19.3.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-common:19.3.0] /home/anju/.gradle/caches/transforms-2/files-2.1/8198a3289316976d21f3789a6bafd1c8/jetified-firebase-common-19.3.0/AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/566e06e5ebf44c9853989bc8ffad1d28/jetified-play-services-location-16.0.0/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/566e06e5ebf44c9853989bc8ffad1d28/jetified-play-services-location-16.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/438b4d2b3dc56db1a963e6409a53981b/play-services-location-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/438b4d2b3dc56db1a963e6409a53981b/play-services-location-17.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/160985c233e23f79bad9a37e22a7158f/play-services-measurement-impl-17.2.2/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/160985c233e23f79bad9a37e22a7158f/play-services-measurement-impl-17.2.2/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/141d94a470ee9666d17d69a1744b7285/play-services-measurement-sdk-api-17.2.2/AndroidManifest.xml:20:5-44
@@ -268,8 +277,8 @@ MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/anju/.grad
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/187fb4c1c365ae32171bd8312a35992f/play-services-tasks-17.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/31a3395230a9bd928e78ed2dc5338b8e/firebase-measurement-connector-18.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/31a3395230a9bd928e78ed2dc5338b8e/firebase-measurement-connector-18.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/08dda63aa6024eef34fb6b14605fdb41/play-services-places-placereport-16.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/08dda63aa6024eef34fb6b14605fdb41/play-services-places-placereport-16.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/2a2ff4e2ca31d43ce7839e62c3803847/play-services-places-placereport-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/2a2ff4e2ca31d43ce7839e62c3803847/play-services-places-placereport-17.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/bf32d33463f95f7bff9ab9ece9656a67/play-services-ads-identifier-17.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/bf32d33463f95f7bff9ab9ece9656a67/play-services-ads-identifier-17.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/7fd22aeb4f79b9429ac8cf9bff3a7c83/jetified-play-services-basement-17.0.0/AndroidManifest.xml:20:5-44
@@ -296,8 +305,8 @@ MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/anju/.g
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/5a5d53679d914b768463e606a8e8f920/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/2ecca17b0eb70fcbc1e9d8148641257d/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/2ecca17b0eb70fcbc1e9d8148641257d/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.0.2] /home/anju/.gradle/caches/transforms-2/files-2.1/3aabd8abbe4aca13d5de98eb4193fb62/core-1.0.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.0.2] /home/anju/.gradle/caches/transforms-2/files-2.1/3aabd8abbe4aca13d5de98eb4193fb62/core-1.0.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.1.0] /home/anju/.gradle/caches/transforms-2/files-2.1/3aaf6e5219b7f981ec263df919098c6f/core-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] /home/anju/.gradle/caches/transforms-2/files-2.1/3aaf6e5219b7f981ec263df919098c6f/core-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/74d81cbab4baf82cd5ba855cad11f23d/lifecycle-runtime-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/74d81cbab4baf82cd5ba855cad11f23d/lifecycle-runtime-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/82b463c8584fb88ea5a1f562d740c4b7/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
@@ -308,8 +317,8 @@ MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/anju/.gradle/caches/tr
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/3bf5fc05ca184d01c3bed36c84f7c6c7/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/b652641e60f40536fdf44e18539d0968/lifecycle-viewmodel-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/b652641e60f40536fdf44e18539d0968/lifecycle-viewmodel-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/2ae0f4532ce9c2b2540e7c7daff54826/versionedparcelable-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/2ae0f4532ce9c2b2540e7c7daff54826/versionedparcelable-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/anju/.gradle/caches/transforms-2/files-2.1/4227c25f5adddf6ac1aa1a65c6b6f6a4/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/anju/.gradle/caches/transforms-2/files-2.1/4227c25f5adddf6ac1aa1a65c6b6f6a4/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-components:16.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/5a98b0bc79b50b6878d0ab7ecf03881a/jetified-firebase-components-16.0.0/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-components:16.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/5a98b0bc79b50b6878d0ab7ecf03881a/jetified-firebase-components-16.0.0/AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/c8f4c2580dddd9ecf64fc10bf9fbc418/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
@@ -356,58 +365,16 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.2] /h
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/141d94a470ee9666d17d69a1744b7285/play-services-measurement-sdk-api-17.2.2/AndroidManifest.xml:23:5-67
 	android:name
 		ADDED from /home/anju/AndroidStudioProjects/flutter_training_app/android/app/src/debug/AndroidManifest.xml:6:22-64
-service#com.google.firebase.components.ComponentDiscoveryService
-ADDED from [:firebase_auth] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
-MERGED from [:cloud_firestore] /home/anju/AndroidStudioProjects/flutter_training_app/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
-MERGED from [:cloud_firestore] /home/anju/AndroidStudioProjects/flutter_training_app/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
-MERGED from [:firebase_database] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
-MERGED from [:firebase_database] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
-MERGED from [:firebase_core] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
-MERGED from [:firebase_core] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
-MERGED from [com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:33:9-39:19
-MERGED from [com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:33:9-39:19
-MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/ca912bff2260618b5b638fe661521702/play-services-measurement-api-17.2.2/AndroidManifest.xml:27:9-33:19
-MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/ca912bff2260618b5b638fe661521702/play-services-measurement-api-17.2.2/AndroidManifest.xml:27:9-33:19
-MERGED from [com.google.firebase:firebase-firestore:21.3.0] /home/anju/.gradle/caches/transforms-2/files-2.1/b1a138f1fd2e4d3955b58e771b90858e/jetified-firebase-firestore-21.3.0/AndroidManifest.xml:17:9-23:19
-MERGED from [com.google.firebase:firebase-firestore:21.3.0] /home/anju/.gradle/caches/transforms-2/files-2.1/b1a138f1fd2e4d3955b58e771b90858e/jetified-firebase-firestore-21.3.0/AndroidManifest.xml:17:9-23:19
-MERGED from [com.google.firebase:firebase-database:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/47d814f593a3df8ebc95e63c8129a9c8/jetified-firebase-database-17.0.0/AndroidManifest.xml:29:9-33:19
-MERGED from [com.google.firebase:firebase-database:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/47d814f593a3df8ebc95e63c8129a9c8/jetified-firebase-database-17.0.0/AndroidManifest.xml:29:9-33:19
-MERGED from [com.google.firebase:firebase-iid:20.0.2] /home/anju/.gradle/caches/transforms-2/files-2.1/f26cdfb5f8d69cbc9663543f3ec1de65/firebase-iid-20.0.2/AndroidManifest.xml:29:9-35:19
-MERGED from [com.google.firebase:firebase-iid:20.0.2] /home/anju/.gradle/caches/transforms-2/files-2.1/f26cdfb5f8d69cbc9663543f3ec1de65/firebase-iid-20.0.2/AndroidManifest.xml:29:9-35:19
-MERGED from [com.google.firebase:firebase-common:19.3.0] /home/anju/.gradle/caches/transforms-2/files-2.1/8198a3289316976d21f3789a6bafd1c8/jetified-firebase-common-19.3.0/AndroidManifest.xml:32:9-36:35
-MERGED from [com.google.firebase:firebase-common:19.3.0] /home/anju/.gradle/caches/transforms-2/files-2.1/8198a3289316976d21f3789a6bafd1c8/jetified-firebase-common-19.3.0/AndroidManifest.xml:32:9-36:35
-	android:exported
-		ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:35:13-37
-	tools:targetApi
-		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/anju/.gradle/caches/transforms-2/files-2.1/8198a3289316976d21f3789a6bafd1c8/jetified-firebase-common-19.3.0/AndroidManifest.xml:36:13-32
-	android:directBootAware
-		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/anju/.gradle/caches/transforms-2/files-2.1/8198a3289316976d21f3789a6bafd1c8/jetified-firebase-common-19.3.0/AndroidManifest.xml:34:13-43
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from [:location] /home/anju/AndroidStudioProjects/flutter_training_app/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-81
 	android:name
-		ADDED from [:firebase_auth] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:18-89
-meta-data#com.google.firebase.components:io.flutter.plugins.firebaseauth.FlutterFirebaseAppRegistrar
-ADDED from [:firebase_auth] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
-	android:value
-		ADDED from [:firebase_auth] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+		ADDED from [:location] /home/anju/AndroidStudioProjects/flutter_training_app/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from [:location] /home/anju/AndroidStudioProjects/flutter_training_app/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-79
+MERGED from [:geolocator] /home/anju/AndroidStudioProjects/flutter_training_app/build/geolocator/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-79
+MERGED from [:geolocator] /home/anju/AndroidStudioProjects/flutter_training_app/build/geolocator/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-79
 	android:name
-		ADDED from [:firebase_auth] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-122
-meta-data#com.google.firebase.components:io.flutter.plugins.firebase.cloudfirestore.FlutterFirebaseAppRegistrar
-ADDED from [:cloud_firestore] /home/anju/AndroidStudioProjects/flutter_training_app/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
-	android:value
-		ADDED from [:cloud_firestore] /home/anju/AndroidStudioProjects/flutter_training_app/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
-	android:name
-		ADDED from [:cloud_firestore] /home/anju/AndroidStudioProjects/flutter_training_app/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-133
-meta-data#com.google.firebase.components:io.flutter.plugins.firebase.database.FlutterFirebaseAppRegistrar
-ADDED from [:firebase_database] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
-	android:value
-		ADDED from [:firebase_database] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
-	android:name
-		ADDED from [:firebase_database] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-127
-meta-data#com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseAppRegistrar
-ADDED from [:firebase_core] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
-	android:value
-		ADDED from [:firebase_core] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
-	android:name
-		ADDED from [:firebase_core] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-123
+		ADDED from [:location] /home/anju/AndroidStudioProjects/flutter_training_app/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-76
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
 ADDED from [:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-80
 	android:name
@@ -432,14 +399,80 @@ ADDED from [:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app
 		ADDED from [:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-72
 	android:name
 		ADDED from [:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:17:17-67
-uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from [:location] /home/anju/AndroidStudioProjects/flutter_training_app/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-81
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [:cloud_firestore] /home/anju/AndroidStudioProjects/flutter_training_app/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_auth] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_auth] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_database] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_database] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_core] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_core] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:33:9-39:19
+MERGED from [com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:33:9-39:19
+MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/ca912bff2260618b5b638fe661521702/play-services-measurement-api-17.2.2/AndroidManifest.xml:27:9-33:19
+MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/ca912bff2260618b5b638fe661521702/play-services-measurement-api-17.2.2/AndroidManifest.xml:27:9-33:19
+MERGED from [com.google.firebase:firebase-firestore:21.3.0] /home/anju/.gradle/caches/transforms-2/files-2.1/b1a138f1fd2e4d3955b58e771b90858e/jetified-firebase-firestore-21.3.0/AndroidManifest.xml:17:9-23:19
+MERGED from [com.google.firebase:firebase-firestore:21.3.0] /home/anju/.gradle/caches/transforms-2/files-2.1/b1a138f1fd2e4d3955b58e771b90858e/jetified-firebase-firestore-21.3.0/AndroidManifest.xml:17:9-23:19
+MERGED from [com.google.firebase:firebase-database:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/47d814f593a3df8ebc95e63c8129a9c8/jetified-firebase-database-17.0.0/AndroidManifest.xml:29:9-33:19
+MERGED from [com.google.firebase:firebase-database:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/47d814f593a3df8ebc95e63c8129a9c8/jetified-firebase-database-17.0.0/AndroidManifest.xml:29:9-33:19
+MERGED from [com.google.firebase:firebase-iid:20.0.2] /home/anju/.gradle/caches/transforms-2/files-2.1/f26cdfb5f8d69cbc9663543f3ec1de65/firebase-iid-20.0.2/AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-iid:20.0.2] /home/anju/.gradle/caches/transforms-2/files-2.1/f26cdfb5f8d69cbc9663543f3ec1de65/firebase-iid-20.0.2/AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-common:19.3.0] /home/anju/.gradle/caches/transforms-2/files-2.1/8198a3289316976d21f3789a6bafd1c8/jetified-firebase-common-19.3.0/AndroidManifest.xml:32:9-36:35
+MERGED from [com.google.firebase:firebase-common:19.3.0] /home/anju/.gradle/caches/transforms-2/files-2.1/8198a3289316976d21f3789a6bafd1c8/jetified-firebase-common-19.3.0/AndroidManifest.xml:32:9-36:35
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:35:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/anju/.gradle/caches/transforms-2/files-2.1/8198a3289316976d21f3789a6bafd1c8/jetified-firebase-common-19.3.0/AndroidManifest.xml:36:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/anju/.gradle/caches/transforms-2/files-2.1/8198a3289316976d21f3789a6bafd1c8/jetified-firebase-common-19.3.0/AndroidManifest.xml:34:13-43
 	android:name
-		ADDED from [:location] /home/anju/AndroidStudioProjects/flutter_training_app/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-78
-uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from [:location] /home/anju/AndroidStudioProjects/flutter_training_app/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-79
+		ADDED from [:cloud_firestore] /home/anju/AndroidStudioProjects/flutter_training_app/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:8:18-89
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.cloudfirestore.FlutterFirebaseAppRegistrar
+ADDED from [:cloud_firestore] /home/anju/AndroidStudioProjects/flutter_training_app/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+	android:value
+		ADDED from [:cloud_firestore] /home/anju/AndroidStudioProjects/flutter_training_app/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
 	android:name
-		ADDED from [:location] /home/anju/AndroidStudioProjects/flutter_training_app/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-76
+		ADDED from [:cloud_firestore] /home/anju/AndroidStudioProjects/flutter_training_app/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-133
+meta-data#com.google.firebase.components:io.flutter.plugins.firebaseauth.FlutterFirebaseAppRegistrar
+ADDED from [:firebase_auth] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+	android:value
+		ADDED from [:firebase_auth] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+	android:name
+		ADDED from [:firebase_auth] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-122
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.database.FlutterFirebaseAppRegistrar
+ADDED from [:firebase_database] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+	android:value
+		ADDED from [:firebase_database] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+	android:name
+		ADDED from [:firebase_database] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-127
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseAppRegistrar
+ADDED from [:firebase_core] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+	android:value
+		ADDED from [:firebase_core] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+	android:name
+		ADDED from [:firebase_core] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-123
+activity#com.google.firebase.auth.internal.FederatedSignInActivity
+ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:24:9-31:50
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:26:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:28:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:27:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:29:13-102
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:30:13-72
+	tools:replace
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:31:13-47
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:25:13-85
+meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
+ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:36:13-38:85
+	android:value
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:38:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:37:17-109
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.android.gms:play-services-maps:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/6f4e6eb26f6c204062e462fe30c558b2/play-services-maps-17.0.0/AndroidManifest.xml:23:5-79
 MERGED from [com.google.android.gms:play-services-measurement:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/a2d3f38d709f8b9f54c2677fdca8f29a/play-services-measurement-17.2.2/AndroidManifest.xml:24:5-79
@@ -472,28 +505,6 @@ ADDED from [com.google.android.gms:play-services-maps:17.0.0] /home/anju/.gradle
 		ADDED from [com.google.android.gms:play-services-maps:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/6f4e6eb26f6c204062e462fe30c558b2/play-services-maps-17.0.0/AndroidManifest.xml:35:13-37
 	android:name
 		ADDED from [com.google.android.gms:play-services-maps:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/6f4e6eb26f6c204062e462fe30c558b2/play-services-maps-17.0.0/AndroidManifest.xml:34:13-50
-activity#com.google.firebase.auth.internal.FederatedSignInActivity
-ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:24:9-31:50
-	android:excludeFromRecents
-		ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:26:13-46
-	android:launchMode
-		ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:28:13-44
-	android:exported
-		ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:27:13-36
-	android:permission
-		ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:29:13-102
-	android:theme
-		ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:30:13-72
-	tools:replace
-		ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:31:13-47
-	android:name
-		ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:25:13-85
-meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
-ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:36:13-38:85
-	android:value
-		ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:38:17-82
-	android:name
-		ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:37:17-109
 uses-permission#android.permission.WAKE_LOCK
 ADDED from [com.google.android.gms:play-services-measurement:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/a2d3f38d709f8b9f54c2677fdca8f29a/play-services-measurement-17.2.2/AndroidManifest.xml:25:5-68
 MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/ca912bff2260618b5b638fe661521702/play-services-measurement-api-17.2.2/AndroidManifest.xml:24:5-68

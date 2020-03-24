@@ -14,18 +14,18 @@
 14    <uses-permission android:name="android.permission.INTERNET" />
 14-->/home/anju/AndroidStudioProjects/flutter_training_app/android/app/src/debug/AndroidManifest.xml:6:5-66
 14-->/home/anju/AndroidStudioProjects/flutter_training_app/android/app/src/debug/AndroidManifest.xml:6:22-64
-15    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-15-->[:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-80
-15-->[:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-77
-16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-16-->[:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-81
-16-->[:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-78
-17    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-17-->[:location] /home/anju/AndroidStudioProjects/flutter_training_app/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-81
-17-->[:location] /home/anju/AndroidStudioProjects/flutter_training_app/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-78
-18    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Include required permissions for Google Maps API to run. -->
-18-->[:location] /home/anju/AndroidStudioProjects/flutter_training_app/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-79
-18-->[:location] /home/anju/AndroidStudioProjects/flutter_training_app/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-76
+15    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+15-->[:location] /home/anju/AndroidStudioProjects/flutter_training_app/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-81
+15-->[:location] /home/anju/AndroidStudioProjects/flutter_training_app/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-78
+16    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+16-->[:location] /home/anju/AndroidStudioProjects/flutter_training_app/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-79
+16-->[:location] /home/anju/AndroidStudioProjects/flutter_training_app/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-76
+17    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+17-->[:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-80
+17-->[:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-77
+18    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- Include required permissions for Google Maps API to run. -->
+18-->[:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-81
+18-->[:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-78
 19    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 19-->[com.google.android.gms:play-services-maps:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/6f4e6eb26f6c204062e462fe30c558b2/play-services-maps-17.0.0/AndroidManifest.xml:23:5-79
 19-->[com.google.android.gms:play-services-maps:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/6f4e6eb26f6c204062e462fe30c558b2/play-services-maps-17.0.0/AndroidManifest.xml:23:22-76
@@ -58,7 +58,7 @@
 36        android:name="io.flutter.app.FlutterApplication"
 36-->/home/anju/AndroidStudioProjects/flutter_training_app/android/app/src/main/AndroidManifest.xml:9:9-57
 37        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-37-->[androidx.core:core:1.0.2] /home/anju/.gradle/caches/transforms-2/files-2.1/3aabd8abbe4aca13d5de98eb4193fb62/core-1.0.2/AndroidManifest.xml:22:18-86
+37-->[androidx.core:core:1.1.0] /home/anju/.gradle/caches/transforms-2/files-2.1/3aaf6e5219b7f981ec263df919098c6f/core-1.1.0/AndroidManifest.xml:24:18-86
 38        android:debuggable="true"
 39        android:icon="@mipmap/ic_launcher"
 39-->/home/anju/AndroidStudioProjects/flutter_training_app/android/app/src/main/AndroidManifest.xml:11:9-43
@@ -106,108 +106,108 @@
 63            android:value="2" />
 63-->/home/anju/AndroidStudioProjects/flutter_training_app/android/app/src/main/AndroidManifest.xml:30:13-30
 64
-65        <service
-65-->[:firebase_auth] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
-66            android:name="com.google.firebase.components.ComponentDiscoveryService"
-66-->[:firebase_auth] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:18-89
-67            android:directBootAware="true"
-67-->[com.google.firebase:firebase-common:19.3.0] /home/anju/.gradle/caches/transforms-2/files-2.1/8198a3289316976d21f3789a6bafd1c8/jetified-firebase-common-19.3.0/AndroidManifest.xml:34:13-43
-68            android:exported="false" >
-68-->[com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:35:13-37
-69            <meta-data
-69-->[:firebase_auth] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
-70                android:name="com.google.firebase.components:io.flutter.plugins.firebaseauth.FlutterFirebaseAppRegistrar"
-70-->[:firebase_auth] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-122
-71                android:value="com.google.firebase.components.ComponentRegistrar" />
-71-->[:firebase_auth] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
-72            <meta-data
-72-->[:cloud_firestore] /home/anju/AndroidStudioProjects/flutter_training_app/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
-73                android:name="com.google.firebase.components:io.flutter.plugins.firebase.cloudfirestore.FlutterFirebaseAppRegistrar"
-73-->[:cloud_firestore] /home/anju/AndroidStudioProjects/flutter_training_app/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-133
-74                android:value="com.google.firebase.components.ComponentRegistrar" />
-74-->[:cloud_firestore] /home/anju/AndroidStudioProjects/flutter_training_app/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
-75            <meta-data
-75-->[:firebase_database] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
-76                android:name="com.google.firebase.components:io.flutter.plugins.firebase.database.FlutterFirebaseAppRegistrar"
-76-->[:firebase_database] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-127
-77                android:value="com.google.firebase.components.ComponentRegistrar" />
-77-->[:firebase_database] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
-78            <meta-data
-78-->[:firebase_core] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
-79                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseAppRegistrar"
-79-->[:firebase_core] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-123
-80                android:value="com.google.firebase.components.ComponentRegistrar" />
-80-->[:firebase_core] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
-81            <meta-data
-81-->[com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:36:13-38:85
-82                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-82-->[com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:37:17-109
-83                android:value="com.google.firebase.components.ComponentRegistrar" />
-83-->[com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:38:17-82
-84            <meta-data
-84-->[com.google.android.gms:play-services-measurement-api:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/ca912bff2260618b5b638fe661521702/play-services-measurement-api-17.2.2/AndroidManifest.xml:30:13-32:85
-85                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-85-->[com.google.android.gms:play-services-measurement-api:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/ca912bff2260618b5b638fe661521702/play-services-measurement-api-17.2.2/AndroidManifest.xml:31:17-139
-86                android:value="com.google.firebase.components.ComponentRegistrar" />
-86-->[com.google.android.gms:play-services-measurement-api:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/ca912bff2260618b5b638fe661521702/play-services-measurement-api-17.2.2/AndroidManifest.xml:32:17-82
-87            <meta-data
-87-->[com.google.firebase:firebase-firestore:21.3.0] /home/anju/.gradle/caches/transforms-2/files-2.1/b1a138f1fd2e4d3955b58e771b90858e/jetified-firebase-firestore-21.3.0/AndroidManifest.xml:20:13-22:85
-88                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
-88-->[com.google.firebase:firebase-firestore:21.3.0] /home/anju/.gradle/caches/transforms-2/files-2.1/b1a138f1fd2e4d3955b58e771b90858e/jetified-firebase-firestore-21.3.0/AndroidManifest.xml:21:17-111
-89                android:value="com.google.firebase.components.ComponentRegistrar" />
-89-->[com.google.firebase:firebase-firestore:21.3.0] /home/anju/.gradle/caches/transforms-2/files-2.1/b1a138f1fd2e4d3955b58e771b90858e/jetified-firebase-firestore-21.3.0/AndroidManifest.xml:22:17-82
-90            <meta-data
-90-->[com.google.firebase:firebase-database:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/47d814f593a3df8ebc95e63c8129a9c8/jetified-firebase-database-17.0.0/AndroidManifest.xml:30:13-32:85
-91                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
-91-->[com.google.firebase:firebase-database:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/47d814f593a3df8ebc95e63c8129a9c8/jetified-firebase-database-17.0.0/AndroidManifest.xml:31:17-109
-92                android:value="com.google.firebase.components.ComponentRegistrar" />
-92-->[com.google.firebase:firebase-database:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/47d814f593a3df8ebc95e63c8129a9c8/jetified-firebase-database-17.0.0/AndroidManifest.xml:32:17-82
-93            <meta-data
-93-->[com.google.firebase:firebase-iid:20.0.2] /home/anju/.gradle/caches/transforms-2/files-2.1/f26cdfb5f8d69cbc9663543f3ec1de65/firebase-iid-20.0.2/AndroidManifest.xml:32:13-34:85
-94                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
-94-->[com.google.firebase:firebase-iid:20.0.2] /home/anju/.gradle/caches/transforms-2/files-2.1/f26cdfb5f8d69cbc9663543f3ec1de65/firebase-iid-20.0.2/AndroidManifest.xml:33:17-96
-95                android:value="com.google.firebase.components.ComponentRegistrar" />
-95-->[com.google.firebase:firebase-iid:20.0.2] /home/anju/.gradle/caches/transforms-2/files-2.1/f26cdfb5f8d69cbc9663543f3ec1de65/firebase-iid-20.0.2/AndroidManifest.xml:34:17-82
-96        </service>
-97
-98        <provider
-98-->[:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:11:9-19:20
-99            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
-99-->[:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-82
-100            android:authorities="com.cgt.flutter_training_app.flutter.image_provider"
-100-->[:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-74
-101            android:exported="false"
-101-->[:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-37
-102            android:grantUriPermissions="true" >
-102-->[:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-47
+65        <provider
+65-->[:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:11:9-19:20
+66            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+66-->[:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-82
+67            android:authorities="com.cgt.flutter_training_app.flutter.image_provider"
+67-->[:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-74
+68            android:exported="false"
+68-->[:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-37
+69            android:grantUriPermissions="true" >
+69-->[:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-47
+70            <meta-data
+70-->[:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-18:75
+71                android:name="android.support.FILE_PROVIDER_PATHS"
+71-->[:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:17:17-67
+72                android:resource="@xml/flutter_image_picker_file_paths" />
+72-->[:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-72
+73        </provider>
+74
+75        <service
+75-->[:cloud_firestore] /home/anju/AndroidStudioProjects/flutter_training_app/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+76            android:name="com.google.firebase.components.ComponentDiscoveryService"
+76-->[:cloud_firestore] /home/anju/AndroidStudioProjects/flutter_training_app/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:8:18-89
+77            android:directBootAware="true"
+77-->[com.google.firebase:firebase-common:19.3.0] /home/anju/.gradle/caches/transforms-2/files-2.1/8198a3289316976d21f3789a6bafd1c8/jetified-firebase-common-19.3.0/AndroidManifest.xml:34:13-43
+78            android:exported="false" >
+78-->[com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:35:13-37
+79            <meta-data
+79-->[:cloud_firestore] /home/anju/AndroidStudioProjects/flutter_training_app/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+80                android:name="com.google.firebase.components:io.flutter.plugins.firebase.cloudfirestore.FlutterFirebaseAppRegistrar"
+80-->[:cloud_firestore] /home/anju/AndroidStudioProjects/flutter_training_app/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-133
+81                android:value="com.google.firebase.components.ComponentRegistrar" />
+81-->[:cloud_firestore] /home/anju/AndroidStudioProjects/flutter_training_app/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+82            <meta-data
+82-->[:firebase_auth] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+83                android:name="com.google.firebase.components:io.flutter.plugins.firebaseauth.FlutterFirebaseAppRegistrar"
+83-->[:firebase_auth] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-122
+84                android:value="com.google.firebase.components.ComponentRegistrar" />
+84-->[:firebase_auth] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+85            <meta-data
+85-->[:firebase_database] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+86                android:name="com.google.firebase.components:io.flutter.plugins.firebase.database.FlutterFirebaseAppRegistrar"
+86-->[:firebase_database] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-127
+87                android:value="com.google.firebase.components.ComponentRegistrar" />
+87-->[:firebase_database] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+88            <meta-data
+88-->[:firebase_core] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+89                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseAppRegistrar"
+89-->[:firebase_core] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-123
+90                android:value="com.google.firebase.components.ComponentRegistrar" />
+90-->[:firebase_core] /home/anju/AndroidStudioProjects/flutter_training_app/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+91            <meta-data
+91-->[com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:36:13-38:85
+92                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+92-->[com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:37:17-109
+93                android:value="com.google.firebase.components.ComponentRegistrar" />
+93-->[com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:38:17-82
+94            <meta-data
+94-->[com.google.android.gms:play-services-measurement-api:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/ca912bff2260618b5b638fe661521702/play-services-measurement-api-17.2.2/AndroidManifest.xml:30:13-32:85
+95                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+95-->[com.google.android.gms:play-services-measurement-api:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/ca912bff2260618b5b638fe661521702/play-services-measurement-api-17.2.2/AndroidManifest.xml:31:17-139
+96                android:value="com.google.firebase.components.ComponentRegistrar" />
+96-->[com.google.android.gms:play-services-measurement-api:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/ca912bff2260618b5b638fe661521702/play-services-measurement-api-17.2.2/AndroidManifest.xml:32:17-82
+97            <meta-data
+97-->[com.google.firebase:firebase-firestore:21.3.0] /home/anju/.gradle/caches/transforms-2/files-2.1/b1a138f1fd2e4d3955b58e771b90858e/jetified-firebase-firestore-21.3.0/AndroidManifest.xml:20:13-22:85
+98                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+98-->[com.google.firebase:firebase-firestore:21.3.0] /home/anju/.gradle/caches/transforms-2/files-2.1/b1a138f1fd2e4d3955b58e771b90858e/jetified-firebase-firestore-21.3.0/AndroidManifest.xml:21:17-111
+99                android:value="com.google.firebase.components.ComponentRegistrar" />
+99-->[com.google.firebase:firebase-firestore:21.3.0] /home/anju/.gradle/caches/transforms-2/files-2.1/b1a138f1fd2e4d3955b58e771b90858e/jetified-firebase-firestore-21.3.0/AndroidManifest.xml:22:17-82
+100            <meta-data
+100-->[com.google.firebase:firebase-database:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/47d814f593a3df8ebc95e63c8129a9c8/jetified-firebase-database-17.0.0/AndroidManifest.xml:30:13-32:85
+101                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+101-->[com.google.firebase:firebase-database:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/47d814f593a3df8ebc95e63c8129a9c8/jetified-firebase-database-17.0.0/AndroidManifest.xml:31:17-109
+102                android:value="com.google.firebase.components.ComponentRegistrar" />
+102-->[com.google.firebase:firebase-database:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/47d814f593a3df8ebc95e63c8129a9c8/jetified-firebase-database-17.0.0/AndroidManifest.xml:32:17-82
 103            <meta-data
-103-->[:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-18:75
-104                android:name="android.support.FILE_PROVIDER_PATHS"
-104-->[:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:17:17-67
-105                android:resource="@xml/flutter_image_picker_file_paths" />
-105-->[:image_picker] /home/anju/AndroidStudioProjects/flutter_training_app/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-72
-106        </provider> <!-- Needs to be explicitly declared on P+ -->
-107        <uses-library
-107-->[com.google.android.gms:play-services-maps:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/6f4e6eb26f6c204062e462fe30c558b2/play-services-maps-17.0.0/AndroidManifest.xml:33:9-35:40
-108            android:name="org.apache.http.legacy"
-108-->[com.google.android.gms:play-services-maps:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/6f4e6eb26f6c204062e462fe30c558b2/play-services-maps-17.0.0/AndroidManifest.xml:34:13-50
-109            android:required="false" />
-109-->[com.google.android.gms:play-services-maps:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/6f4e6eb26f6c204062e462fe30c558b2/play-services-maps-17.0.0/AndroidManifest.xml:35:13-37
-110
-111        <activity
-111-->[com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:24:9-31:50
-112            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
-112-->[com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:25:13-85
-113            android:excludeFromRecents="true"
-113-->[com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:26:13-46
-114            android:exported="true"
-114-->[com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:27:13-36
-115            android:launchMode="singleTask"
-115-->[com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:28:13-44
-116            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
-116-->[com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:29:13-102
-117            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-117-->[com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:30:13-72
+103-->[com.google.firebase:firebase-iid:20.0.2] /home/anju/.gradle/caches/transforms-2/files-2.1/f26cdfb5f8d69cbc9663543f3ec1de65/firebase-iid-20.0.2/AndroidManifest.xml:32:13-34:85
+104                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+104-->[com.google.firebase:firebase-iid:20.0.2] /home/anju/.gradle/caches/transforms-2/files-2.1/f26cdfb5f8d69cbc9663543f3ec1de65/firebase-iid-20.0.2/AndroidManifest.xml:33:17-96
+105                android:value="com.google.firebase.components.ComponentRegistrar" />
+105-->[com.google.firebase:firebase-iid:20.0.2] /home/anju/.gradle/caches/transforms-2/files-2.1/f26cdfb5f8d69cbc9663543f3ec1de65/firebase-iid-20.0.2/AndroidManifest.xml:34:17-82
+106        </service>
+107
+108        <activity
+108-->[com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:24:9-31:50
+109            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
+109-->[com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:25:13-85
+110            android:excludeFromRecents="true"
+110-->[com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:26:13-46
+111            android:exported="true"
+111-->[com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:27:13-36
+112            android:launchMode="singleTask"
+112-->[com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:28:13-44
+113            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
+113-->[com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:29:13-102
+114            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- Needs to be explicitly declared on P+ -->
+114-->[com.google.firebase:firebase-auth:19.2.0] /home/anju/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:30:13-72
+115        <uses-library
+115-->[com.google.android.gms:play-services-maps:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/6f4e6eb26f6c204062e462fe30c558b2/play-services-maps-17.0.0/AndroidManifest.xml:33:9-35:40
+116            android:name="org.apache.http.legacy"
+116-->[com.google.android.gms:play-services-maps:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/6f4e6eb26f6c204062e462fe30c558b2/play-services-maps-17.0.0/AndroidManifest.xml:34:13-50
+117            android:required="false" />
+117-->[com.google.android.gms:play-services-maps:17.0.0] /home/anju/.gradle/caches/transforms-2/files-2.1/6f4e6eb26f6c204062e462fe30c558b2/play-services-maps-17.0.0/AndroidManifest.xml:35:13-37
 118
 119        <receiver
 119-->[com.google.android.gms:play-services-measurement:17.2.2] /home/anju/.gradle/caches/transforms-2/files-2.1/a2d3f38d709f8b9f54c2677fdca8f29a/play-services-measurement-17.2.2/AndroidManifest.xml:29:9-33:20
