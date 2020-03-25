@@ -21,10 +21,11 @@ class MapsWithMarker extends StatefulWidget{
 }
 
 // Summary: Handles the state of map.
-class MapsWithMarkerState extends State<MapsWithMarker>{
+class MapsWithMarkerState extends State<MapsWithMarker> {
 
     GoogleMapController mapController;
     GoogleMapsService googleMapsService = GoogleMapsService();
+    bool locationServiceActive = true;
 
     static LatLng initialLatLng;
     LatLng initialPosition = initialLatLng;
@@ -40,7 +41,33 @@ class MapsWithMarkerState extends State<MapsWithMarker>{
         // TODO: implement initState
         super.initState();
         this.getUserLocation();
+        this.loadingInitialPosition();
     }
+
+    // Summary: this function will provide the current location of user
+    // Reference:
+    // 1. https://github.com/Baseflow/flutter-geolocator
+    void getUserLocation() async{
+        Position position = await Geolocator().getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
+        List<Placemark> placeMark = await Geolocator().placemarkFromCoordinates(position.latitude, position.longitude);
+
+        setState(() {
+            initialLatLng = LatLng(position.latitude, position.longitude);
+            locationController.text = placeMark[0].name;
+        });
+    }
+
+    // Summary: Check if the location services are on or not after 5 seconds.
+    void loadingInitialPosition() async{
+        await Future.delayed(Duration(seconds: 5)).then((v) {
+            if(initialLatLng == null){
+                setState(() {
+                    locationServiceActive = false;
+                });
+            }
+        });
+    }
+
 
     // Summary: This function will provide custom map controller
     void onMapCreatedCustom(GoogleMapController controller) {
@@ -50,18 +77,16 @@ class MapsWithMarkerState extends State<MapsWithMarker>{
     }
 
     // Summary: Handle the onPress event of add Marker button.
-    void onAddMarkerPressed() {
-        AlertDialog(
-            title: Text("Dialog Box"),
-        );
+    void _addMarker(LatLng location, String address) {
+        // Summary: Will set the required variables to set the marker.
         setState(() {
             marker.add(
                 Marker(
                     markerId: MarkerId(initialPosition.toString()),
-                    position: initialPosition,
+                    position: location,
                     infoWindow: InfoWindow(
-                        title: "My location",
-                        snippet: "Destintion"
+                        title: address,
+                        snippet: "Destination"
                     ),
                     icon: BitmapDescriptor.defaultMarker
                 ));
@@ -79,7 +104,7 @@ class MapsWithMarkerState extends State<MapsWithMarker>{
     // Reference:
         //  1. http://wptrafficanalyzer.in/blog/route-between-two-locations-with-waypoints-in-google-map-android-api-v2/
         //  2. https://developers.google.com/maps/documentation/directions/start
-    List _decodePoly(String poly) {
+    List decodePoly(String poly) {
         var list = poly.codeUnits;
         var lList = new List();
         int index = 0;
@@ -120,40 +145,66 @@ class MapsWithMarkerState extends State<MapsWithMarker>{
     * So convertToLatLng will return two object of LatLng inside a list.
     * */
     List<LatLng> convertToLatLng(List points){
+
         List<LatLng> result = <LatLng>[];
         for(int i = 0; i < points.length; i++){
-            if(i % 2 == 0){
+            if(i % 2 != 0){
                 result.add(LatLng(points[i-1], points[i]));
             }
         }
         return result;
     }
 
-    // Summary: this function will provide the current location of user
-    // Reference:
-        // 1. https://github.com/Baseflow/flutter-geolocator
-    void getUserLocation() async{
+    // ! SEND REQUEST
+    void sendRequest(String intendedLocation) async {
+        List<Placemark> placemark = await Geolocator().placemarkFromAddress(intendedLocation);
+        double latitude = placemark[0].position.latitude;
+        double longitude = placemark[0].position.longitude;
+        LatLng destination = LatLng(latitude, longitude);
+        _addMarker(destination, intendedLocation);
+        String route = await googleMapsService.getRouteCoordinates(
+            initialLatLng, destination);
+        createRoute(route);
+    }
 
-        Position position = await Geolocator().getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
-        List<Placemark> placeMark = await Geolocator().placemarkFromCoordinates(position.latitude, position.longitude);
-
+    // Summary: This function will create the route using the polylines.
+    void createRoute(String encondedPoly) {
         setState(() {
-            initialLatLng = LatLng(position.latitude, position.longitude);
-            locationController.text = placeMark[0].name;
+            polyLine.add(Polyline(
+                polylineId: PolylineId(initialPosition.toString()),
+                width: 5,
+                points: convertToLatLng(decodePoly(encondedPoly)),
+                color: Colors.black));
         });
     }
 
     @override
     Widget build(BuildContext context) {
         // TODO: implement build
-        return initialLatLng == null ? Container(
-                alignment: Alignment.center,
-                child: CircularProgressIndicator(),
-            ) : Stack(
+        return initialLatLng == null ?
+        Container(
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                    Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                            CircularProgressIndicator()
+                        ],
+                    ),
+                    SizedBox(height: 10,),
+                    Visibility(
+                        visible: locationServiceActive == false,
+                        child: Text("Please check location services!", style: TextStyle(color: Colors.grey, fontSize: 18),),
+                    )
+                ],
+            )
+        )
+            : Stack(
                     children: <Widget>[
                         GoogleMap(
                             initialCameraPosition: CameraPosition(
-                                target: initialPosition,
+                                target: initialLatLng,
                                 zoom: 10.0
                             ),
                             mapType: MapType.normal,
@@ -161,6 +212,7 @@ class MapsWithMarkerState extends State<MapsWithMarker>{
                             onMapCreated: onMapCreatedCustom,
                             markers: marker,
                             onCameraMove: onCameraMoveCustom,
+                            polylines: polyLine,
                         ),
                         Positioned(
                             top: 50.0,
@@ -171,7 +223,7 @@ class MapsWithMarkerState extends State<MapsWithMarker>{
                                 width: double.infinity,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(3.0),
-                                    color: Colors.white,
+                                    color: Colors.black12,
                                     boxShadow: [
                                         BoxShadow(
                                             color: Colors.grey,
@@ -181,23 +233,34 @@ class MapsWithMarkerState extends State<MapsWithMarker>{
                                     ],
                                 ),
                                 child: TextField(
-                                    cursorColor: Colors.black,
+                                    cursorColor: Colors.black54,
                                     controller: locationController,
                                     decoration: InputDecoration(
                                         icon: Container(
-                                            margin: EdgeInsets.only(left: 20, top: 5),
-                                            width: 10,
-                                            height: 10,
-                                            child: Icon(
-                                                Icons.location_on,
-                                                color: Colors.black,
+                                            width: 30,
+                                            height: 50,
+                                            child: Container(
+                                                margin: EdgeInsets.only(top: 5, left: 12),
+//                                                alignment: Alignment.center,
+                                                child: Icon(
+                                                    Icons.location_on,
+                                                    color: Colors.black,
+                                                ),
                                             ),
                                         ),
                                         hintText: "pick up",
+                                        hintStyle: TextStyle(
+                                            color: Colors.black54
+                                        ),
                                         border: InputBorder.none,
-                                        contentPadding: EdgeInsets.only(left: 15.0, top: 16.0),
+                                        contentPadding: EdgeInsets.only(left: 5.0),
+                                        fillColor: Colors.white
+                                    ),
+                                    style: TextStyle(
+                                        color: Colors.black45
                                     ),
                                 ),
+
                             ),
                         ),
 
@@ -210,7 +273,7 @@ class MapsWithMarkerState extends State<MapsWithMarker>{
                                 width: double.infinity,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(3.0),
-                                    color: Colors.white,
+                                    color: Colors.black12,
                                     boxShadow: [
                                         BoxShadow(
                                             color: Colors.grey,
@@ -220,30 +283,51 @@ class MapsWithMarkerState extends State<MapsWithMarker>{
                                     ],
                                 ),
                                 child: TextField(
-                                    cursorColor: Colors.black,
-        //                            controller: appState.destinationController,
+                                    cursorColor: Colors.black54,
+                                    controller: destinationController,
                                     textInputAction: TextInputAction.go,
-        //                            onSubmitted: (value) {
-        //                                appState.sendRequest(value);
-        //                            },
+                                    onSubmitted: (value) {
+                                        sendRequest(value);
+                                    },
                                     decoration: InputDecoration(
                                         icon: Container(
-                                            margin: EdgeInsets.only(left: 20, top: 5),
-                                            width: 10,
-                                            height: 10,
-                                            child: Icon(
-                                                Icons.local_taxi,
-                                                color: Colors.black,
+                                            width: 30,
+                                            height: 50,
+                                            child: Container(
+                                                margin: EdgeInsets.only(top: 5, left: 12),
+//                                                alignment: Alignment.center,
+                                                child: Icon(
+                                                    Icons.local_taxi,
+                                                    color: Colors.black,
+                                                ),
                                             ),
                                         ),
                                         hintText: "destination?",
+                                        hintStyle: TextStyle(
+                                            color: Colors.black45
+                                        ),
                                         border: InputBorder.none,
-                                        contentPadding: EdgeInsets.only(left: 15.0, top: 16.0),
+                                        contentPadding: EdgeInsets.only(left: 5.0),
+                                        fillColor: Colors.white
+                                    ),
+                                    style: TextStyle(
+                                        color: Colors.black54
                                     ),
                                 ),
+
                             ),
-                    )
+                        ),
                 ],
             );
     }
+
+    @override
+    void dispose() {
+        // TODO: implement dispose
+        super.dispose();
+        setState(() {
+            initialLatLng = null;
+        });
+    }
+
 }
