@@ -42,8 +42,13 @@ dependencies:
   geoflutterfire:
   location:
   uuid:
-  google_maps_webservice:
   geolocator:
+  flutter_spinkit:
+
+  # Package used for autocomplete places.
+  google_maps_webservice:
+  flutter_google_places:
+
 
 dev_dependencies:
   flutter_test:

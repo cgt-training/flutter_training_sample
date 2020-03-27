@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_google_places/flutter_google_places.dart';
 
 // Api_Calling
 import 'package:flutter_training_app/api_calling/google_maps_service.dart';
@@ -6,9 +7,12 @@ import 'package:flutter_training_app/api_calling/google_maps_service.dart';
 // Dependency
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:google_maps_webservice/places.dart';
 
 // Utils
 import 'package:flutter_training_app/util/colors.dart';
+
 
 // Summary: Stateful widget for map which will handle the state changes of map.
 class MapsWithMarker extends StatefulWidget{
@@ -40,8 +44,12 @@ class MapsWithMarkerState extends State<MapsWithMarker> {
     void initState() {
         // TODO: implement initState
         super.initState();
-        this.getUserLocation();
-        this.loadingInitialPosition();
+        if(!mounted) {
+            return;
+        }else{
+            this.getUserLocation();
+            this.loadingInitialPosition();
+        }
     }
 
     // Summary: this function will provide the current location of user
@@ -50,7 +58,9 @@ class MapsWithMarkerState extends State<MapsWithMarker> {
     void getUserLocation() async{
         Position position = await Geolocator().getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
         List<Placemark> placeMark = await Geolocator().placemarkFromCoordinates(position.latitude, position.longitude);
-
+        if(!mounted) {
+            return;
+        }
         setState(() {
             initialLatLng = LatLng(position.latitude, position.longitude);
             locationController.text = placeMark[0].name;
@@ -59,6 +69,9 @@ class MapsWithMarkerState extends State<MapsWithMarker> {
 
     // Summary: Check if the location services are on or not after 5 seconds.
     void loadingInitialPosition() async{
+        if(!mounted) {
+            return;
+        }
         await Future.delayed(Duration(seconds: 5)).then((v) {
             if(initialLatLng == null){
                 setState(() {
@@ -189,7 +202,11 @@ class MapsWithMarkerState extends State<MapsWithMarker> {
                     Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                            CircularProgressIndicator()
+//                            CircularProgressIndicator()
+                            SpinKitWave(
+                                color: Colors.lightBlueAccent,
+                                size: 50.0,
+                            )
                         ],
                     ),
                     SizedBox(height: 10,),
@@ -286,6 +303,23 @@ class MapsWithMarkerState extends State<MapsWithMarker> {
                                     cursorColor: Colors.black54,
                                     controller: destinationController,
                                     textInputAction: TextInputAction.go,
+                                    onTap: ()async{
+                                        Prediction p = await PlacesAutocomplete.show(
+                                            context: context,
+                                            mode: Mode.overlay,
+                                            apiKey: "AIzaSyCEplLkJx94Rq8ed7X2pa_NV2BX_WuG6ug",
+                                            language: "en",
+                                            components: [
+                                                Component(Component.country, "in")
+                                            ]
+                                        );
+                                        if(p !=null){
+                                            print("Prediction PlacesAutocomplete");
+                                            print(p.description);
+                                            destinationController.text = p.description;
+//                                            sendRequest(p.description);
+                                        }
+                                    },
                                     onSubmitted: (value) {
                                         sendRequest(value);
                                     },
@@ -323,11 +357,11 @@ class MapsWithMarkerState extends State<MapsWithMarker> {
 
     @override
     void dispose() {
+//        setState(() {
+//            initialLatLng = null;
+//        });
         // TODO: implement dispose
         super.dispose();
-        setState(() {
-            initialLatLng = null;
-        });
     }
 
 }
