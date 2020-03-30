@@ -1,6 +1,7 @@
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_training_app/screens/side_menu_screens/maps_example.dart';
+import 'package:flutter_training_app/screens/side_menu_screens/maps_with_moving_marker.dart';
 import 'package:flutter_training_app/util/colors.dart';
 import 'package:redux/redux.dart';
 
@@ -33,7 +34,7 @@ class MainMenuState extends State<MainMenu> with SingleTickerProviderStateMixin 
 
     // Summary: Class constructor for creating the tab controller.
     MainMenuState(){
-        tabController = TabController(length: 5, vsync: this);
+        tabController = TabController(length: 6, vsync: this);
     }
 
     // Summary: initialized the state with first item returned by createMenuItems
@@ -57,7 +58,8 @@ class MainMenuState extends State<MainMenu> with SingleTickerProviderStateMixin 
             _buildTab(Icons.table_chart, "TABEXAMPLE", 1),
             _buildTab(Icons.person, "PROFILE", 2), // TODO(clocksmith): This should be Icons.bar_chart, but its currently unavalableflutter
             _buildTab(Icons.map, "Maps", 3),
-            _buildTab(Icons.add_to_home_screen, "LOGOUT", 4),
+            _buildTab(Icons.map, "MapMarker", 4),
+            _buildTab(Icons.add_to_home_screen, "LOGOUT", 5),
         ];
     }
 
@@ -71,6 +73,7 @@ class MainMenuState extends State<MainMenu> with SingleTickerProviderStateMixin 
             ListsWithTab(),
             Profile(),
             MapsExample(),
+            MapsWithMovingMarker(),
             Logout()
         ];
     }
