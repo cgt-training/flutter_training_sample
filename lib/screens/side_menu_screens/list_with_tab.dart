@@ -8,16 +8,12 @@ import 'package:flutter_training_app/screens/side_menu_screens/posts.dart';
 class ListsWithTab extends StatelessWidget {
     @override
     Widget build(BuildContext context) {
-        return MaterialApp(
-            debugShowCheckedModeBanner: false,
-            theme: ThemeData(
-                brightness: Brightness.light,
-                primaryColor: Colors.pink[800], //Changing this will change the color of the TabBar
-                accentColor: Colors.cyan[600],
-            ),
-            home: DefaultTabController(
-                length: 2,
-                child:
+        return Scaffold(
+            body: MaterialApp(
+                debugShowCheckedModeBanner: false,
+                home: DefaultTabController(
+                    length: 2,
+                    child:
                     Scaffold(
                         backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
 //                        bottomNavigationBar:
@@ -41,13 +37,14 @@ class ListsWithTab extends StatelessWidget {
                             ),
                         ),
                         body: TabBarView(
-                                children: <Widget>[
-                                    Posts(),
-                                    Comments()
-                                ],
-                            ),
+                            children: <Widget>[
+                                Posts(),
+                                Comments()
+                            ],
+                        ),
                     ),
-            )
+                )
+            ),
         );
 
     }

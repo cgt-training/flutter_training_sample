@@ -1,5 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+
+// Screens
 import 'package:flutter_training_app/screens/login.dart';
 
 // Summary: When logout button clicked this class will be called and after specified time it will navigate to Login.
@@ -16,10 +18,17 @@ class Logout extends StatelessWidget{
     }
   @override
   Widget build(BuildContext context) {
+      Future.delayed(Duration(seconds: 1), () {
+          Navigator.of(context).pushReplacement(
+              MaterialPageRoute(
+                  settings: RouteSettings(name: '/login'),
+                  builder: (context){
+                      return Login();
+                  }
+              )
+          );
+//          Navigator.popUntil(context, ModalRoute.withName("/login"));
 
-      timer = new Timer(const Duration(milliseconds: 1000), () {
-          timer.cancel();
-          Navigator.of(context, rootNavigator: true).pop();
       });
 
       // TODO: implement build

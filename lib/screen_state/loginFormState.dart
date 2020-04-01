@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_training_app/screens/side_menu_screens/main_menu.dart';
 import 'package:redux/redux.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
@@ -29,6 +30,7 @@ import 'package:flutter_training_app/response_model/loginResponse.dart';
 
 // Screens
 import 'package:flutter_training_app/screens/screen_props/list_props.dart';
+import 'package:flutter_training_app/screens/side_menu_screens/dashboard.dart';
 
 // UI Elements
 import 'package:flutter_training_app/ui_elements/customDialog.dart';
@@ -144,7 +146,16 @@ class LoginFormState extends State<LoginForm> {
 
                         // Summary: hide progressbar.
                         Navigator.of(context).pop();
-                        Navigator.pushNamed(context, '/dashboard');
+                        Navigator.of(context, rootNavigator: true).pushReplacement(
+                          MaterialPageRoute(
+                              settings: RouteSettings(name: '/dashboard'),
+                              builder: (context){
+                                  return MainMenu();
+                              }
+                          )
+                         );
+
+//                        Navigator.pushNamed(context, '/dashboard');
                     } else{
 
                         // Summary: hide progressbar.
@@ -159,22 +170,6 @@ class LoginFormState extends State<LoginForm> {
 
     }
 
-//    void showInSnackBar(String value) {
-//        FocusScope.of(context).requestFocus(new FocusNode());
-//        _scaffoldKey.currentState?.removeCurrentSnackBar();
-//        _scaffoldKey.currentState.showSnackBar(new SnackBar(
-//            content: new Text(
-//                value,
-//                textAlign: TextAlign.center,
-//                style: TextStyle(
-//                    color: Colors.white,
-//                    fontSize: 16.0,
-//                    fontFamily: "WorkSansSemiBold"),
-//            ),
-//            backgroundColor: Colors.blue,
-//            duration: Duration(seconds: 3),
-//        ));
-//    }
 
     // Summary: Will create tables in the SQLite database.
     createTablesInDatabase(){
@@ -240,6 +235,8 @@ class LoginFormState extends State<LoginForm> {
                                                                             fontFamily: "WorkSansSemiBold",
                                                                             fontSize: 17.0
                                                                         ),
+                                                                        fillColor: Colors.white,
+                                                                        filled: true
                                                                     ),
                                                                     style: TextStyle(
                                                                         fontFamily: "WorkSansSemiBold",
@@ -281,6 +278,8 @@ class LoginFormState extends State<LoginForm> {
                                                                                 color: Colors.black,
                                                                             ),
                                                                         ),
+                                                                        fillColor: Colors.white,
+                                                                        filled: true
                                                                     ),
                                                                     style: TextStyle(
                                                                         fontFamily: "WorkSansSemiBold",

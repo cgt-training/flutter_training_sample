@@ -229,6 +229,8 @@ class RegistrationFormState extends State<RegistrationForm>{
                                                                 fontFamily: "WorkSansSemiBold",
                                                                 fontSize: 16.0
                                                             ),
+                                                            fillColor: Colors.white,
+                                                            filled: true
                                                         ),
                                                     ),
                                                 ),
@@ -256,7 +258,11 @@ class RegistrationFormState extends State<RegistrationForm>{
                                                             ),
                                                             hintText: "User Name",
                                                             hintStyle: TextStyle(
-                                                                fontFamily: "WorkSansSemiBold", fontSize: 16.0),
+                                                                fontFamily: "WorkSansSemiBold",
+                                                                fontSize: 16.0
+                                                            ),
+                                                            fillColor: Colors.white,
+                                                            filled: true
                                                         ),
                                                         onFieldSubmitted: (value) => this.onFieldSubmitCustom(value, 'username'),
                                                         onSaved: (value) => _registerModel.username = value,
@@ -282,7 +288,11 @@ class RegistrationFormState extends State<RegistrationForm>{
                                                             ),
                                                             hintText: "Email Address",
                                                             hintStyle: TextStyle(
-                                                                fontFamily: "WorkSansSemiBold", fontSize: 16.0),
+                                                                fontFamily: "WorkSansSemiBold",
+                                                                fontSize: 16.0
+                                                            ),
+                                                            fillColor: Colors.white,
+                                                            filled: true
                                                         ),
                                                         onFieldSubmitted: (value) => this.onFieldSubmitCustom(value, 'email'),
                                                         onSaved: (value) => _registerModel.email = value,
@@ -319,6 +329,8 @@ class RegistrationFormState extends State<RegistrationForm>{
                                                                     color: Colors.black,
                                                                 ),
                                                             ),
+                                                            fillColor: Colors.white,
+                                                            filled: true
                                                         ),
                                                         focusNode: txtPassword,
                                                         onFieldSubmitted: (value) => this.onFieldSubmitCustom(value, 'password'),
@@ -366,6 +378,8 @@ class RegistrationFormState extends State<RegistrationForm>{
                                                                     color: Colors.black,
                                                                 ),
                                                             ),
+                                                            fillColor: Colors.white,
+                                                            filled: true
                                                         ),
                                                     ),
                                                 ),

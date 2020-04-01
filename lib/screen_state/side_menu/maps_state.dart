@@ -44,9 +44,7 @@ class MapsWithMarkerState extends State<MapsWithMarker> {
     void initState() {
         // TODO: implement initState
         super.initState();
-        if(!mounted) {
-            return;
-        }else{
+        if(mounted) {
             this.getUserLocation();
             this.loadingInitialPosition();
         }
@@ -55,16 +53,18 @@ class MapsWithMarkerState extends State<MapsWithMarker> {
     // Summary: this function will provide the current location of user
     // Reference:
     // 1. https://github.com/Baseflow/flutter-geolocator
-    void getUserLocation() async{
-        Position position = await Geolocator().getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
-        List<Placemark> placeMark = await Geolocator().placemarkFromCoordinates(position.latitude, position.longitude);
-        if(!mounted) {
-            return;
+    void getUserLocation() async {
+        Position position = await Geolocator().getCurrentPosition(
+            desiredAccuracy: LocationAccuracy.high);
+        List<Placemark> placeMark = await Geolocator().placemarkFromCoordinates(
+            position.latitude, position.longitude);
+        if (mounted) {
+
+            setState(() {
+                initialLatLng = LatLng(position.latitude, position.longitude);
+                locationController.text = placeMark[0].name;
+            });
         }
-        setState(() {
-            initialLatLng = LatLng(position.latitude, position.longitude);
-            locationController.text = placeMark[0].name;
-        });
     }
 
     // Summary: Check if the location services are on or not after 5 seconds.
@@ -145,8 +145,6 @@ class MapsWithMarkerState extends State<MapsWithMarker> {
 
         /*adding to previous value as done in encoding */
         for (var i = 2; i < lList.length; i++) lList[i] += lList[i - 2];
-
-        print(lList.toString());
 
         return lList;
     }
@@ -314,8 +312,7 @@ class MapsWithMarkerState extends State<MapsWithMarker> {
                                             ]
                                         );
                                         if(p !=null){
-                                            print("Prediction PlacesAutocomplete");
-                                            print(p.description);
+
                                             destinationController.text = p.description;
 //                                            sendRequest(p.description);
                                         }
@@ -357,9 +354,9 @@ class MapsWithMarkerState extends State<MapsWithMarker> {
 
     @override
     void dispose() {
-//        setState(() {
-//            initialLatLng = null;
-//        });
+
+         initialLatLng = null;
+
         // TODO: implement dispose
         super.dispose();
     }

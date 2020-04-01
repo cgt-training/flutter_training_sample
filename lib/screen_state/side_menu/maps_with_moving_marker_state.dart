@@ -53,9 +53,8 @@ class MapsWithMovingMarkerState extends State<MapsWithMovingMarkerExample> {
     void initState() {
         // TODO: implement initState
         super.initState();
-        if(!mounted) {
-            return;
-        }else{
+        if(mounted) {
+
             this.getUserLocation();
             this.loadingInitialPosition();
         }
@@ -67,25 +66,24 @@ class MapsWithMovingMarkerState extends State<MapsWithMovingMarkerExample> {
     void getUserLocation() async{
         Position position = await Geolocator().getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
         List<Placemark> placeMark = await Geolocator().placemarkFromCoordinates(position.latitude, position.longitude);
-        if(!mounted) {
-            return;
+        if(mounted) {
+            setState(() {
+                initialLatLng = LatLng(position.latitude, position.longitude);
+                locationController.text = placeMark[0].name;
+            });
         }
-        setState(() {
-            initialLatLng = LatLng(position.latitude, position.longitude);
-            locationController.text = placeMark[0].name;
-        });
     }
 
     // Summary: Check if the location services are on or not after 5 seconds.
     void loadingInitialPosition() async{
-        if(!mounted) {
-            return;
-        }
         await Future.delayed(Duration(seconds: 5)).then((v) {
             if(initialLatLng == null){
-                setState(() {
-                    locationServiceActive = false;
-                });
+                if(mounted) {
+                    setState(() {
+                        locationServiceActive = false;
+                    });
+                }
+
             }
         });
     }
@@ -127,8 +125,7 @@ class MapsWithMovingMarkerState extends State<MapsWithMovingMarkerExample> {
     //  1. http://wptrafficanalyzer.in/blog/route-between-two-locations-with-waypoints-in-google-map-android-api-v2/
     //  2. https://developers.google.com/maps/documentation/directions/start
     List decodePoly(String poly) {
-        print("List decodePoly(String poly)");
-        print(poly);
+
         var list = poly.codeUnits;
         var lList = new List();
         int index = 0;
@@ -156,8 +153,6 @@ class MapsWithMovingMarkerState extends State<MapsWithMovingMarkerExample> {
 
         /*adding to previous value as done in encoding */
         for (var i = 2; i < lList.length; i++) lList[i] += lList[i - 2];
-
-//        print(lList.toString());
 
         return lList;
     }
@@ -211,7 +206,6 @@ class MapsWithMovingMarkerState extends State<MapsWithMovingMarkerExample> {
                     () {
 
                         lengthResultLatLng = lengthResultLatLng + 2;
-                        print("updatePinOnMap");
                         updatePinOnMap(lengthResultLatLng);
                 },
             ),
@@ -221,8 +215,6 @@ class MapsWithMovingMarkerState extends State<MapsWithMovingMarkerExample> {
     void updatePinOnMap(int index){
 
         if (index >= ( resultConvertLatLng.length - 2 )){
-            print("updatePinOnMap > 2");
-            print(_timer);
             _timer.cancel();
         }else{
             CameraPosition cPosition = CameraPosition(
@@ -254,9 +246,6 @@ class MapsWithMovingMarkerState extends State<MapsWithMovingMarkerExample> {
     @override
     Widget build(BuildContext context) {
         // TODO: implement build
-        print("length of Result lat lng");
-        print(resultConvertLatLng.length);
-        print(lengthResultLatLng);
 
         return initialLatLng == null ?
         Container(
@@ -378,8 +367,7 @@ class MapsWithMovingMarkerState extends State<MapsWithMovingMarkerExample> {
                                     ]
                                 );
                                 if(p !=null){
-                                    print("Prediction PlacesAutocomplete");
-                                    print(p.description);
+
                                     destinationController.text = p.description;
 //                                            sendRequest(p.description);
                                 }
@@ -439,7 +427,9 @@ class MapsWithMovingMarkerState extends State<MapsWithMovingMarkerExample> {
     void dispose() {
 
         initialLatLng = null;
-        _timer.cancel();
+        if(_timer != null){
+            _timer.cancel();
+        }
         // TODO: implement dispose
         super.dispose();
     }
